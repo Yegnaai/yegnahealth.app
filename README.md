@@ -1,18 +1,26 @@
 # 🩺 yegnahealth.app
 
-![GitHub last commit](https://img.shields.io/github/last-commit/Yegnaai/yegnahealth.app)
-![GitHub repo size](https://img.shields.io/github/repo-size/Yegnaai/yegnahealth.app)
-![GitHub issues](https://img.shields.io/github/issues/Yegnaai/yegnahealth.app)
-![GitHub license](https://img.shields.io/github/license/Yegnaai/yegnahealth.app)
-![Made With Python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)
+**Yegna Health** is your intelligent companion for better health awareness in Ethiopia and beyond. Built with ❤️ using **Python + KivyMD**, it brings local, smart, and accessible health info directly into your hands — no internet required.
+
+---
+
+## 📖 Project Proposal
+
+Yegna Health aims to bridge the information gap in basic health knowledge, symptoms understanding, and lifestyle improvement — especially for underserved communities.
+
+This app:
+- Provides accurate and accessible health tips
+- Supports basic symptom checks
+- Helps track health progress & mood
+- Educates users with daily health challenges
+- Works offline — made for real-world use!
+
 
 ---
 
 ## 📖 Project Overview
 
 **Yegna Health** is a smart, offline-first health companion app built with **KivyMD + Python** to empower users with local, accessible, and intelligent health resources.
-
-Designed with Ethiopian users in mind, it offers simple symptom tracking, daily health tips, and mood management — all without needing the internet.
 
 ---
 
@@ -22,32 +30,23 @@ Designed with Ethiopian users in mind, it offers simple symptom tracking, daily 
 - 📅 Daily Natural Health Tips
 - 🤒 Symptom Checker (coming soon)
 - 📈 Mood & Health Tracker
-- 🌐 Language Support: Amharic + English
+- 🌐 Language Support: Amharic + oromonya + Tigrinya + somaliyna + English (coming soon)
 - 🔐 Works offline and stores data securely
 - 🎯 Future AI Health Assistant
 
 ---
 
-## 🔧 Tech Stack
-
-- **Python**
-- **KivyMD**
-- **SQLite** (Planned for offline storage)
-- **pdoc / GitHub Pages** for documentation
-- **Modular Structure**: `kv/`, `views/`, `controllers/`, `assets/`
-
----
 
 ## 🛣️ Roadmap
 
 | Feature                            | Status    |
 |------------------------------------|-----------|
 | App UI & Navigation               | ✅ Done    |
-| Health Profile Input              | ✅ Done    |
-| Daily Tips Engine                 | ✅ Done    |
+| Health Profile Input              | 🟡 In Progress |
+| Daily Tips Engine                 | 🟡 In Progress |
 | Mood Tracker                      | 🟡 In Progress |
 | Symptom Checker (Rule-based)      | 🔲 Planned |
-| Local Language Support            | 🟡 In Progress |
+| Local Language Support            | ✅ Done    |
 | Encrypted Local Storage           | 🔲 Planned |
 | Health Quiz Gamification          | 🔲 Planned |
 | AI Assistant (OpenAI/LLM-based)   | 🔲 Planned |
