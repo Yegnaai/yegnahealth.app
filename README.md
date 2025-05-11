@@ -23,8 +23,9 @@ This app:
 - 🌿 Daily Tips & Natural Remedies  
 - 🚑 Symptom Checker (coming soon)  
 - 📊 Mood & Health Tracker  
-- 🌍 Amharic & English Support  
-- 🔒 Offline & Secure SQLite (planned for logging data)
+- 🌍 Amharic & English Support (coming soon)  
+- 🔒 Offline & Secure SQLite (planned for logging data) (coming soon)  
+- 🏨 Emergency Numbers + Location-aware Help (coming soon)  
 
 ---
 
