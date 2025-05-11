@@ -24,7 +24,7 @@ This app:
 - 🚑 Symptom Checker (coming soon)  
 - 📊 Mood & Health Tracker  
 - 🌍 Amharic & English Support  
-- 🔒 Offline & Secure  
+- 🔒 Offline & Secure SQLite (planned for logging data)
 
 ---
 
@@ -32,7 +32,6 @@ This app:
 
 - **Python**
 - **KivyMD**
-- **SQLite** (planned for logging data)
 - **Modular Directory Structure** (`views`, `controllers`, `kv`, `assets`)
 
 ---
