@@ -1,3 +1,7 @@
+## 🛣️ Visual Roadmap
+
+🚧 Follow our [Interactive Roadmap](https://github.com/Yegnaai/yegnahealth.app/projects) to see what’s cooking!
+
 # 🩺 yegnahealth.app
 
 **Yegna Health** is your intelligent companion for better health awareness in Ethiopia and beyond. Built with ❤️ using **Python + KivyMD**, it brings local, smart, and accessible health info directly into your hands — no internet required.
