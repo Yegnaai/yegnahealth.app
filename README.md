@@ -1,31 +1,30 @@
 # 🩺 yegnahealth.app
 
-**Yegna Health** is your intelligent companion for better health awareness in Ethiopia and beyond. Built with ❤️ using **Python + KivyMD**, it brings local, smart, and accessible health info directly into your hands — no internet required.
+![GitHub last commit](https://img.shields.io/github/last-commit/Yegnaai/yegnahealth.app)
+![GitHub repo size](https://img.shields.io/github/repo-size/Yegnaai/yegnahealth.app)
+![GitHub issues](https://img.shields.io/github/issues/Yegnaai/yegnahealth.app)
+![GitHub license](https://img.shields.io/github/license/Yegnaai/yegnahealth.app)
+![Made With Python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)
 
 ---
 
-## 📖 Project Proposal
+## 📖 Project Overview
 
-Yegna Health aims to bridge the information gap in basic health knowledge, symptoms understanding, and lifestyle improvement — especially for underserved communities.
+**Yegna Health** is a smart, offline-first health companion app built with **KivyMD + Python** to empower users with local, accessible, and intelligent health resources.
 
-This app:
-- Provides accurate and accessible health tips
-- Supports basic symptom checks
-- Helps track health progress & mood
-- Educates users with daily health challenges
-- Works offline — made for real-world use!
+Designed with Ethiopian users in mind, it offers simple symptom tracking, daily health tips, and mood management — all without needing the internet.
 
 ---
 
-## 📲 Features
+## 🚀 Key Features
 
-- 🧑‍⚕️ Health Profile Builder  
-- 🌿 Daily Tips & Natural Remedies  
-- 🚑 Symptom Checker (coming soon)  
-- 📊 Mood & Health Tracker  
-- 🌍 Amharic & English Support (coming soon)  
-- 🔒 Offline & Secure SQLite (planned for logging data) (coming soon)  
-- 🏨 Emergency Numbers + Location-aware Help (coming soon)  
+- 🧑‍⚕️ Health Profile Builder (age, gender, weight, etc.)
+- 📅 Daily Natural Health Tips
+- 🤒 Symptom Checker (coming soon)
+- 📈 Mood & Health Tracker
+- 🌐 Language Support: Amharic + English
+- 🔐 Works offline and stores data securely
+- 🎯 Future AI Health Assistant
 
 ---
 
@@ -33,33 +32,41 @@ This app:
 
 - **Python**
 - **KivyMD**
-- **Modular Directory Structure** (`views`, `controllers`, `kv`, `assets`)
+- **SQLite** (Planned for offline storage)
+- **pdoc / GitHub Pages** for documentation
+- **Modular Structure**: `kv/`, `views/`, `controllers/`, `assets/`
 
 ---
 
-## 🗺️ Roadmap
+## 🛣️ Roadmap
 
-See above.
-
----
-
-## 🙌 Contribution
-
-We welcome health experts, designers, and devs to contribute!  
-Clone the repo, fork it, and send PRs. Let's save lives with code.
-
----
-
-## 📄 License
-
-MIT — Open to all for non-commercial use.
+| Feature                            | Status    |
+|------------------------------------|-----------|
+| App UI & Navigation               | ✅ Done    |
+| Health Profile Input              | ✅ Done    |
+| Daily Tips Engine                 | ✅ Done    |
+| Mood Tracker                      | 🟡 In Progress |
+| Symptom Checker (Rule-based)      | 🔲 Planned |
+| Local Language Support            | 🟡 In Progress |
+| Encrypted Local Storage           | 🔲 Planned |
+| Health Quiz Gamification          | 🔲 Planned |
+| AI Assistant (OpenAI/LLM-based)   | 🔲 Planned |
+| Docs Autogen + GitHub Pages       | 🟡 In Progress |
 
 ---
 
-Made with 🇪🇹 by [YegnaAI]
+## 🗺️ Visual Roadmap
 
-![GitHub last commit](https://img.shields.io/github/last-commit/Yegnaai/yegnahealth.app)
-![GitHub repo size](https://img.shields.io/github/repo-size/Yegnaai/yegnahealth.app)
-![GitHub issues](https://img.shields.io/github/issues/Yegnaai/yegnahealth.app)
-![GitHub license](https://img.shields.io/github/license/Yegnaai/yegnahealth.app)
-![Made With Python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)
+Check out our [📌 GitHub Project Board](https://github.com/Yegnaai/yegnahealth.app/projects) to see current tasks, progress, and what’s next!
+
+---
+
+## 📘 Documentation
+
+📚 [Auto-Generated Docs (GitHub Pages)](https://yegnaai.github.io/yegnahealth.app/) ← *(Coming Soon)*
+
+To build your own docs:
+
+```bash
+pip install pdoc
+pdoc --output-dir docs .
