@@ -1,0 +1,267 @@
+<BabyScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    
+                    MDBoxLayout:
+                        color: 1, 1, 1, 1  # Cool white color
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+                        adaptive_height: True
+                        
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('main')
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+                    MDBoxLayout:
+                        orientation: "vertical"
+                        pos_hint: {"center_y": .5}
+                        ScrollView:
+                            MDGridLayout:
+                                cols: 2
+                                padding: "28dp"
+                                spacing: "20dp"
+                                adaptive_height: True
+                                size_hint_y: None
+                                height: self.minimum_height
+
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('babya')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/pne.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text: "የሳንባ ምች"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "20dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('babyb')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/mal.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text: "የምግብ እጥረት"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "20dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('babyc')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/kuf.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text: "ኩፍኝ"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "20dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('babyd')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/ma.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text: "ማጅራት ገትር"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "20dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('babye')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/wo.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text: "የአንጀት ትል"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "20dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('babyf')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/ton.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text: "ቶንሲል"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "20dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('babyg')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/oral.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text: "የአፍ ፈንገስ"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "20dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('babyh')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/ho.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text: "የሆድ ድርቀት"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "20dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('babyi')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/Children.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text: "አለርጂዎች"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "20dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+
+
+                                

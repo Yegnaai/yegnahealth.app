@@ -1,0 +1,205 @@
+<BabyhScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('baby')
+
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/ho.jpg"
+
+                                MDLabel:
+                                    text:
+                                        "\nየሆድ ድርቀት"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "20sp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+
+                                MDLabel:
+                                    text:
+                                        "\nየሆድ ድርቀት ጊዜያዊ ወይም ሥር የሰደደ ሊሆን የሚችል የተለመደ የምግብ መፈጨት ችግር ሲሆን በሆድ ውስጥ በሚንቀሳቀስበት ወቅት ወደ ምቾት ማጣት፣ እብጠት እና መወጠር ሊያመራ ይችላል።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "13dp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+
+                                    MDLabel:
+                                        text: "ምልክቶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "በሳምንት ከሶስት ያነሰ ሰገራ።\n\n"\
+                                        "ጠንካራ ፣ ደረቅ ወይም ጥቅጥቅ ያለ ሰገራ።\n\n"\
+                                        "በአንጀት እንቅስቃሴ ወቅት መወጠር።\n\n"\
+                                        "የሆድ እብጠት እና ምቾት ማጣት።\n\n"\
+                                        "የምግብ ፍላጎት ማጣት እና ማቅለሽለሽ በከባድ ሁኔታ።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+
+                                    MDLabel:
+                                        text: "መንስኤዎች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ዝቅተኛ የፋይበር አመጋገብ በቂ አትክልት ፣ ፍራፍሬ አለመብላት\n\n"\
+                                        "ድርቀት በቂ ውሃ አለመጠጣት።\n\n"\
+                                        "የአካል ብቃት እንቅስቃሴ ማነስ።\n\n"\
+                                        "ብዙ ጊዜ ሰገራን በመያዝ።\n\n"\
+                                        "የምግብ መፈጨት ችግር።\n\n"\
+                                        "የሆርሞን ለውጦች።\n\n"\
+                                        "ጭንቀት የአንጀት እንቅስቃሴን ይጎዳል።"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+
+                                    MDLabel:
+                                        text: "መከላከል"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ከፍተኛ ፋይበር የበዛበት አመጋገብ ይመገቡ በቀን ከ25-30 ግራም ፋይበር።\n\n"\
+                                        "ቢያንስ 8 ብርጭቆ ውሃ በየቀኑ ይጠጡ።\n\n"\
+                                        "ጭንቀትን ይቀንሱ።\n\n"\
+                                        "አዘውትረህ የአካል ብቃት እንቅስቃሴ ማድርግ  ቀላል እንቅስቃሴ እንኳን ብሆን።\n\n"\
+                                        "ካፌይን እና አልኮልን ያስወግዱ።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+
+                                    MDLabel:
+                                        text: "የቤት ውስጥ መድሃኒቶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ሞቅ ያለ የሎሚ ውሃ ፡ የምግብ መፈጨትን ያሻሽላል።\n\n"\
+                                        "የወይራ ዘይት የሰገራ ማለስለሻ ሆኖ ያገለግላል።\n\n"\
+                                        "የተልባ ዘሮች ከፍተኛ የፋይበር እና ኦሜጋ -3 አላችው።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+
+                                    MDLabel:
+                                        text: "በህክምና ባለሞያ መታየት"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "የሆድ ድርቀት ከ3 ሳምንታት በላይ የቆየ ከሆነ።\n\n"\
+                                        "ከፍተኛ ትኩሳት።\n\n"\
+                                        "በጡት ውስጥ መግል (abcess)መፈጠር አለ።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+

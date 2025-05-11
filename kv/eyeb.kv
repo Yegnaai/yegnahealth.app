@@ -1,0 +1,189 @@
+<EyebScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('eye')
+
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/gla.jpg"
+
+
+
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "ግላኮማ)"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp" 
+                                    halign: "center" 
+
+
+                                MDLabel:
+                                    text: 
+                                        "ግላኮማ : ብዙ ጊዜ በከፍተኛ የዓይን ግፊት (IOP) ምክንያት የዓይን ነርቭን የሚጎዱ የዓይን በሽታዎች ቡድን ነው። ካልታከመ ወደ ማይቀለበስ የእይታ መጥፋት ሊያመራ ይችላል። (ዝምተኛ የእይታ ሌባ) በመባል የሚታወቀው ግላኮማ ጉልህ የሆነ የዓይን ችግር እስኪፈጠር ድረስ ብዙ ጊዜ የማይታዩ ምልክቶች ሳይታዩ ያድጋል።\n\n"                                
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    padding: "11dp"
+
+                                
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "የግላኮማ ዓይነቶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"  
+                        
+
+
+                                MDLabel:
+                                    text: 
+                                        "የመጀመሪያው ክፍት አንግል ግላኮማ (POAG) ፡ በጣም የተለመደው ዓይነት ፣ የውኃ መውረጃ ቱቦዎች ከጊዜ ወደ ጊዜ ቅልጥፍና እየቀነሱ ፣ የአይን ግፊት ይጨምራሉ።\n\n"\
+                                        "ዘግ አንግል  ግላኮማ ፥ በድንገተኛ የፈሳሽ መውርጃ መዘጋት ምክንያት የሚከሰት የህክምና ድንገተኛ የአይን ግፊት በፍጥነት እንዲጨምር ያደርጋል።\n\n"\ 
+                                        "መደበኛ ግላኮማ ፡ መደበኛ የአይን ግፊት ቢኖርም የኦፕቲክ ነርቭ ጉዳት ይከሰታል።\n\n"\
+                                        "የወሊድት ግላኮማ ፥ በአይን እድገት ላይ ጤነኛ ያልሆነ።\n\n"\
+                                        "ሁለተኛ ደረጃ ግላኮማ ፡ በሌላ ሁኔታ እንደ ጉዳት ፣ እብጠት ወይም የመድሃኒት አጠቃቀም ምክንያት የሚከሰት።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    padding: "18dp"
+                                    halign: "left"
+                                
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "የግላኮማ ምልክቶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"  
+                        
+
+
+                                MDLabel:
+                                    text: 
+                                        "  #ክፍት አንግል ግላኮማ:-\n"\
+                                        "ቀስ በቀስ የጎን እይታ ማጣት።\n\n"\
+                                        "  #ዘግ አንግል  ግላኮማ:-\n"\ 
+                                        "ከባድ የዓይን ሕመም - ራስ ምታት - ማቅለሽለሽ እና ማስታወክ - የደበዘዘ እይታ - አይን ውስጥ መቅላት።\n\n"\
+                                        "  #የወሊድ ግላኮማ:-\n"\
+                                        "ትልቅ ዓይኖች - ለብርሃን ስሜታዊነት -  ከመጠን በላይ መቀደድ።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    padding: "18dp"
+                                    halign: "left"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "መንስኤዎች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"  
+                        
+
+
+                                MDLabel:
+                                    text: 
+                                        "ከፍ ያለ የዓይን ግፊት በአብዛኛዎቹ የግላኮማ ዓይነቶች ውስጥ ዋነኛው መንስኤ።\n\n"\
+                                        "እድሜ ከ40 አመት በኋላ ስጋት ይጨምራል።\n\n"\
+                                        "የቤተሰብ ታሪክ።\n\n"\ 
+                                        "የሕክምና ሁኔታዎች ፡ የስኳር በሽታ ፣ የደም ግፊት እና የልብ ሕመም።\n\n"\
+                                        "የአይን ጉዳት ወይም ሁኔታዎች ፡ ጉዳት ወይም እንደ uveitis ያሉ በሽታዎች።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    padding: "18dp"
+                                    halign: "left"
+                                
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "መከላከያ መንገዶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"  
+                        
+
+
+                                MDLabel:
+                                    text: 
+                                        "መደበኛ የአይን ምርመራውችን ማደርግ።\n\n"\
+                                        "ከ40 በላይ ለሆኑ ግለሰቦች የአይኦፒን እና የእይታ ነርቭ ጤናን ለመከታተል በየ1-2 አመት ምርመራውችን ማደርግ።\n\n"\
+                                        "ጉዳቶችን ለመከላከል የመከላከያ መነጽር ይጠቀሙ።\n\n"\
+                                        "የስኳር በሽታ እና የደም ግፊትን ይቆጣጠሩ።\n\n"\
+                                        "አዘውትሮ የአካል ብቃት እንቅስቃሴ ያድርጉ : IOPን በተፈጥሮ ለመቀነስ ይረዳል።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    padding: "18dp"
+                                    halign: "left"

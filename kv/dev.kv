@@ -1,0 +1,213 @@
+<DevScreen>:
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"top": 1}
+
+                        MDIconButton:
+                            icon: "arrow-left"
+                            theme_text_color: "Secondary"
+                            user_font_size: "24sp"
+                            pos_hint: {"center_x": .05, "center_y": .5}
+                            on_release: app.switch_to_screen('main')
+
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            pos_hint: {"right": .95, "center_y": .5}
+                            on_release: app.toggle_theme()
+                    # Scrollable grid of tiles
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 2
+                            padding: dp(20)
+                            spacing: dp(30)
+                            adaptive_height: True
+
+                            MDSmartTile:
+                                radius: 25
+                                box_radius: [0, 0, 24, 24]
+                                fit_mode: "cover"
+                                size_hint: 1, None
+                                height: dp(180)
+                                elevation: 5
+                                source: "assets/dev/yetb.jpg"
+                                on_release: app.switch_to_screen('deva')
+                                MDLabel:
+                                    text: "DOCTOR Y E T B A R K E"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "16sp"
+                                    halign: 'center'
+                                    size_hint_y: None
+                                    height: dp(30)
+                                    theme_text_color: "Custom"
+                                    text_color: 1, 1, 1, 1
+                                    canvas.before:
+                                        Color:
+                                            rgba: 0, 0, 0, 0.5
+                                        Rectangle:
+                                            pos: self.pos
+                                            size: self.size
+
+                            MDSmartTile:
+                                radius: 25
+                                box_radius: [0, 0, 24, 24]
+                                fit_mode: "cover"
+                                size_hint: 1, None
+                                height: dp(180)
+                                elevation: 5
+                                source: "assets/dev/m.jpg"
+                                on_release: app.switch_to_screen('devb')
+                                MDLabel:
+                                    text: "STUDENT M E R O N"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "16sp"
+                                    halign: 'center'
+                                    size_hint_y: None
+                                    height: dp(30)
+                                    theme_text_color: "Custom"
+                                    text_color: 1, 1, 1, 1
+                                    canvas.before:
+                                        Color:
+                                            rgba: 0, 0, 0, 0.5
+                                        Rectangle:
+                                            pos: self.pos
+                                            size: self.size
+
+                            MDSmartTile:
+                                radius: 25
+                                box_radius: [0, 0, 24, 24]
+                                fit_mode: "cover"
+                                size_hint: 1, None
+                                height: dp(180)
+                                elevation: 5
+                                source: "assets/dev/mo.jpg"
+                                on_release: app.switch_to_screen('devc')
+                                MDLabel:
+                                    text: "DOCTOR M E N B E R U"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "16sp"
+                                    halign: 'center'
+                                    size_hint_y: None
+                                    height: dp(30)
+                                    theme_text_color: "Custom"
+                                    text_color: 1, 1, 1, 1
+                                    canvas.before:
+                                        Color:
+                                            rgba: 0, 0, 0, 0.5
+                                        Rectangle:
+                                            pos: self.pos
+                                            size: self.size
+
+                            MDSmartTile:
+                                radius: 25
+                                box_radius: [0, 0, 24, 24]
+                                fit_mode: "cover"
+                                size_hint: 1, None
+                                height: dp(180)
+                                elevation: 5
+                                source: "assets/dev/ki.jpg"
+                                on_release: app.switch_to_screen('devd')
+                                MDLabel:
+                                    text: "DOCTOR K I Y A"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "16sp"
+                                    halign: 'center'
+                                    size_hint_y: None
+                                    height: dp(30)
+                                    theme_text_color: "Custom"
+                                    text_color: 1, 1, 1, 1
+                                    canvas.before:
+                                        Color:
+                                            rgba: 0, 0, 0, 0.5
+                                        Rectangle:
+                                            pos: self.pos
+                                            size: self.size
+
+                            MDSmartTile:
+                                radius: 25
+                                box_radius: [0, 0, 24, 24]
+                                fit_mode: "cover"
+                                size_hint: 1, None
+                                height: dp(180)
+                                elevation: 5
+                                source: "assets/images/pro.jpg"
+                                on_release: app.switch_to_screen('deve')
+                                MDLabel:
+                                    text: "S E W A S E W"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "16sp"
+                                    halign: 'center'
+                                    size_hint_y: None
+                                    height: dp(30)
+                                    theme_text_color: "Custom"
+                                    text_color: 1, 1, 1, 1
+                                    canvas.before:
+                                        Color:
+                                            rgba: 0, 0, 0, 0.5
+                                        Rectangle:
+                                            pos: self.pos
+                                            size: self.size
+
+                            MDSmartTile:
+                                radius: 25
+                                box_radius: [0, 0, 24, 24]
+                                fit_mode: "cover"
+                                size_hint: 1, None
+                                height: dp(180)
+                                elevation: 5
+                                source: "assets/images/pro.jpg"
+                                on_release: app.switch_to_screen('devf')
+                                MDLabel:
+                                    text: "J O Y E"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "16sp"
+                                    halign: 'center'
+                                    size_hint_y: None
+                                    height: dp(30)
+                                    theme_text_color: "Custom"
+                                    text_color: 1, 1, 1, 1
+                                    canvas.before:
+                                        Color:
+                                            rgba: 0, 0, 0, 0.5
+                                        Rectangle:
+                                            pos: self.pos
+                                            size: self.size
+
+                            MDSmartTile:
+                                radius: 25
+                                box_radius: [0, 0, 24, 24]
+                                fit_mode: "cover"
+                                size_hint: 1, None
+                                height: dp(180)
+                                elevation: 5
+                                source: "assets/dev/yesa.jpg"
+                                on_release: app.switch_to_screen('devg')
+                                MDLabel:
+                                    text: "H O P E"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "16sp"
+                                    halign: 'center'
+                                    size_hint_y: None
+                                    height: dp(30)
+                                    theme_text_color: "Custom"
+                                    text_color: 1, 1, 1, 1
+                                    canvas.before:
+                                        Color:
+                                            rgba: 0, 0, 0, 0.5
+                                        Rectangle:
+                                            pos: self.pos
+                                            size: self.size

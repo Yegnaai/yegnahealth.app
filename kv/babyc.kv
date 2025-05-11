@@ -1,0 +1,208 @@
+<BabycScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('baby')
+
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/kuf.jpg"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ኩፍ"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "20sp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ኩፍኝ በጣም ተላላፊ ነው። የቫይረስ ኢንፌክሽን የመተንፈሻ አካላትን ይጎዳል። በማሳል ወይም በማስነጠስ በአየር ወለድ ጠብታዎች ይተላለፋል።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "15dp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+
+                                    MDLabel:
+                                        text: "ምልክቶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ለኩፍኝ ከተጋለጡ በኋላ ምልክቶቹ ከ 7-14 ቀናት ውስጥ ይታያሉ።\n\n"\
+                                        "ከፍተኛ ትኩሳት (እስከ 104°F ወይም 40°C)።\n\n"\
+                                        "የአፍንጫ ፈሳሽ እና ቀይ ፣ ውሃማ አይኖች።\n\n"\
+                                        "ደረቅ ሳል።\n\n"\
+                                        "Koplik spots (በአፍ ውስጥ ያሉ ጥቃቅን ነጭ ነጠብጣቦች)።\n\n"\
+                                        "ቀይ ሽፍታ ከፊት በመጀመር ወደ ሰውነታችን በመስፋፋት ላይ።\n\n"\
+                                        "ድካም እና የምግብ ፍላጎት ማጣት።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+
+                                    MDLabel:
+                                        text: "መንስኤዎች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "በአየር (በማሳል ፣ በማስነጠስ)።\n\n"\
+                                        "የተበከሉ ንጣፎችን መንካት እና ከዚያም ፊትን መንካት።\n\n"\
+                                        "የተዳከመ የበሽታ መቋቋም ስርዓት በተመጣጠነ ምግብ እጥረት ወይም በሌላ ኢንፌክሽን።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+
+                                    MDLabel:
+                                        text: "መከላከል"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "እረፍት እና ፈሳሸ በደንብ መጠጣት።\n\n"\
+                                        "የኩፍኝ ክትባት (MMR)።\n\n"\
+                                        "ጥሩ ንጽህና እጅን አዘውትሮ መታጠብ።\n\n"\
+                                        "ንጽህናን ይለማመዱ ጡትን ከመንካትዎ በፊት እጅን ይታጠቡ።\n\n"\
+                                        "በበሽታ ከተያዙ ሰዎች ጋር ንክኪ አለማድረግ።\n\n"\
+                                        "ትክክለኛ አመጋገብ ቫይታሚን ኤ በሽታ የመከላከል አቅምን ያጠናክራል።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+
+                                    MDLabel:
+                                        text: "የኩፍኝ ችግሮች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ኩፍኝ ወደ ከባድ የጤና ችግሮች ሊመራ ይችላል:-\n\n"\
+                                        "የሳንባ ምች (ከኩፍኝ ጋር የተያያዘ ሞት ዋነኛ መንስኤ)።\n\n"\
+                                        "ኢንሰፍላይትስ (የአንጎል እብጠት)።\n\n"\
+                                        "ዓይነ ስውርነት (በቫይታሚን ኤ እጥረት ምክንያት)።\n\n"\
+                                        "ከባድ ተቅማጥ እና ድርቀት።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+
+                                    MDLabel:
+                                        text: "በህክምና ባለሞያ መታየት"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "የማይቀንስ ከፍተኛ ትኩሳት።\n\n"\
+                                        "የመተንፈስ ችግር።\n\n"\
+                                        "የማያቋርጥ ተቅማጥ እና ድርቀት ካስተዋሉ በህክምና ባለሞያ መታየት።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+

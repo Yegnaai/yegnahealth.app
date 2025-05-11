@@ -1,0 +1,252 @@
+<BabyiScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('baby')
+
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/Children.jpg"
+                                
+                                
+                                MDLabel:
+                                    text: "\nአለርጂዎች"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    halign: "center"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "አለርጂዎች የሚከሰቱት የሰውነት በሽታ የመከላከል ስርዓት ለአንዳንድ ንጥረ ነገሮች ያልተለመደ ምላሽ ሲሰጥ ነው።\n\n"\
+                                        "አለርጂ በመባል የሚታወቁት, በተለምዶ ለብዙ ሰዎች ምንም ጉዳት የላቸውም እነዚህ ወቅታዊ አለርጂዎች(እንደ የአበባ ዱቄት ያሉ) ወይም የምግብ አለርጂዎች (እንደ ኦቾሎኒ ወይም ወተት ያሉ) ሊሆኑ ይችላሉ።\n\n"
+                                        
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    halign: "center"
+                                
+
+
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    # Section Title
+                                    MDLabel:
+                                        text: "ምልክቶች:-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+
+
+                                MDLabel:
+                                    text: 
+                                        "\nወቅታዊ አለርጂዎች"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    halign: "center"
+                                        
+                                        
+                                MDLabel:
+                                    text:
+                                        "\n\n"\
+                                        "ተደጋጋሚ እና ድንገተኛ ማስነጠስ።\n\n"\
+                                        "ፈሳሽ የማያቋርጥ የአፍንጫ መታፈን።\n\n"\
+                                        "አይኖች አፍንጫ ወይም ጉሮሮ በእነዚህ ቦታዎች ላይ ምቾት ማጣት እና ብስጭት።\n\n"\
+                                        "በአፍንጫ መጨናነቅ ምክንያት እንቅልፍ ማጣት የማያቋርጥ ድካም\n\n"
+                                            
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "14dp"
+                                    theme_text_color: "Secondary"
+                                    adaptive_height: True
+
+                                
+                                MDLabel:
+                                    text: "የምግብ አለርጂዎች"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"
+
+
+                                        
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "በቆዳ ላይ የሚያሳክ እብጠት።\n\n"\
+                                        "ማበጥ በብዛት ፊት ፣ ከንፈር ፣ ምላስ ፣ ወይም ጉሮሮ።\n\n"\
+                                        "በሆድ ውስጥ መኮማተር እና ምቾት ማጣት።\n\n"\
+                                        "(Anaphylaxis) ከባድ ፣ ለሕይወት አስጊ የሆነ አለርጂ ፣ አፋጣኝ የሕክምና ክትትል የሚያስፈልገው ፣ የመተንፈስ ችግር ፣ እብጠት እና የደም ግፊት መቀነስ የሚታወቅ።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "14dp"
+                                    theme_text_color: "Secondary"
+                                    adaptive_height: True
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "አጋላጭ ሁኔታዎች:-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ዘረመል የአለርጂ የአስም ወይም (eczema) ቤተሰብ ታሪክ ያላቸው ልጆች ለአለርጂ የመጋለጥ እድላቸው ከፍተኛ ነው።\n\n"\
+                                        "በህይወት መጀመርያ ለተወሰኑ አለርጂዎች መጋለጥ ይጨምራል።\n\n"\
+                                        "አስም ያለባቸው ልጆች ለከፋ የአለርጂ ምላሾች የመጋለጥ እድላቸው ከፍተኛ ነው።\n\n"\
+                                        "ከፍተኛ የአበባ ዱቄት ብክለት ወይም የቤት እንስሳት ባሉባቸው አካባቢዎች ማደግ ለወቅታዊ አለርጂዎች አስተዋፅዖ ያደርጋል።\n\n"\
+                                        "#የተዳከመ የበሽታ መከላከል ስርዓት።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "15dp"
+                                    theme_text_color: "Secondary"
+                                    adaptive_height: True
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "መከላከያ መንገዶች:-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "ለወቅታዊ አለርጂዎች"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    halign: "center"
+
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ተጋላጭነትን ይገድቡ አቧራ ወይም የአበባ ዱቄት ብናኝ በሚኖርበት ጊዜ መስኮቶችን ይዝጉ ፣ የአየር ማጣሪያዎችን ይጠቀሙ እና አልጋዎትን አዘውትረው በፅዳት ይያዙ።\n\n"\
+                                        "የፀሐይ መነፅር እና ኮፍያ ይልበሱ ከቤት ውጭ በሚሆኑበት ጊዜ አይንን ከአበባ ብናኝ ይከላከላል።\n\n"                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "14dp"
+                                    theme_text_color: "Secondary"
+                                    adaptive_height: True
+
+
+
+                                MDLabel:
+                                    text: "ለምግብ አለርጂዎች"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"
+                                    halign: "center"
+                                    halign: "justify"
+
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "የአለርጂ ምላሾችን ከሚያስከትሉ ምግቦችን ሙሉ በሙሉ ያስወግዱ። በትምህርት ቤቶች በሬስቶራንቶች እና በጨዋታ ቀናት ውስጥ ይጠንቀቁ።\n\n"\
+                                        "ሁል ጊዜ የታሸጉ ምግቦችን ያረጋግጡ። ብዙ የታሸጉ ምግቦች የተበከሉ ናቸው።\n\n"\
+                                        "የግንዛቤ ትምህርት ስለ አለርጂዎች እና የአለርጂ ምላሽ ምልክቶችን እንዴት መለየት እንደሚችሉ ልጅዎን እና ተንከባካቢዎችን ያስተምሩ።\n\n"                              
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "14dp"
+                                    theme_text_color: "Secondary"
+                                    adaptive_height: True
+                                    
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "መድሃኒት ማክበር"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "የዓመታዊ ምርመራዎች የልጅዎን ሁኔታ ለመከታተል እና ህክምናን እንደ አስፈላጊነቱ ለማስተካከል ከአለርጂ ባለሙያ ጋር መደበኛ ቀጠሮ ይያዙ።\n\n"\
+                                        "ቅስቃሻችን እና ምልክቶችን በመረዳት ወላጆች ህጻናት አለርጂዎቻቸውን በብቃት እንዲቆጣጠሩ እና ጤናማ እና ንቁ ህይወት እንዲኖሩ መርዳት ይችላሉ።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "14dp"
+                                    theme_text_color: "Secondary"
+                                    adaptive_height: True

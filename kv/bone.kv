@@ -1,0 +1,162 @@
+<BoneScreen>:
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    
+                    MDBoxLayout:
+                        color: 1, 1, 1, 1  # Cool white color
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+                        adaptive_height: True
+                        
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('main')
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+                                       
+                    MDBoxLayout:
+                        orientation: "vertical"
+                        pos_hint: {"center_y": .5}
+                        ScrollView:
+                            MDGridLayout:
+                                cols: 2
+                                padding: "28dp"
+                                spacing: "20dp"
+                                adaptive_height: True
+                                size_hint_y: None
+                                height: self.minimum_height
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('bonea')
+                                    orientation: "vertical"
+                                    elevation: 5
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/elbow.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የክርን ህመም")
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('boneb')
+                                    orientation: "vertical"
+                                    elevation: 5
+
+                                    FitImage:
+                                        source: "assets/images/foot.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የእግር ህመም")
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('bonec')
+                                    orientation: "vertical"
+                                    elevation: 5
+
+                                    FitImage:
+                                        source: "assets/images/hand.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የእጅና ጣት ህመም")
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('bonee')
+                                    orientation: "vertical"
+                                    elevation: 5
+
+                                    FitImage:
+                                        source: "assets/images/neck.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የአንገት ህመም")
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('boned')
+                                    orientation: "vertical"
+                                    elevation: 5
+
+                                    FitImage:
+                                        source: "assets/images/knee.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የጉልበት ህመም")
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                
+                                

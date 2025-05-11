@@ -1,0 +1,208 @@
+<CancerdScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('cancer')
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                                        # Scrollable Content Section
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/leukemia.jpg"
+
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ሉኪሚያ Leukemia"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "20sp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+                                
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "ሉኪሚያ ፥ የደም ካንሰር  በአጥንት ቅልጥም ውስጥ የሚጀምር የደም ካንሰር አይነት ሲሆን ይህም የደም ሴሎች በሚፈጠሩበት ለስላሳ ቲሹ ውስጥ ነው።\n\n"\
+                                        "በዋነኛነት ነጭ የደም ሴሎችን ይጎዳል ነገር ግን ቀይ የደም ሴሎችን እና ፕሌትሌጽ ሊጎዳ ይችላል።\n\n"\
+                                        "ሉኪሚያ በተጎዳው የደም ሴሎች ዓይነት እና የበሽታው እድገት መጠን ላይ ይመሰረታል:-\n\n"
+                                    font_size: "14sp"
+                                    halign: 'center'
+                                    theme_text_color: "Hint"
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "የሉኪሚያ ዓይነቶች"
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "1.አጣዳፊ ሊምፎብላስቲክ ሉኪሚያ :-"\
+                                        "ይህ አይነት በፍጥነት እየገሰገሰ እና የነጭ የደም ሴል አይነት የሆኑትን ሊምፎይድ ሴሎችን ይጎዳል። በልጆች ላይ ከአዋቂዎች የበለጠ ይከሰታል።\n\n"\
+                                        "2.አጣዳፊ ማይሎይድ ሉኪሚያ(AML)"\
+                                        " (AML) በፍጥነት ይዛመታል ፣ ማይሎይድ ሴሎችን ይነካል። ኤኤምኤል ከልጆች ይልቅ በአዋቂዎች ላይ በጣም የተለመደ ነው።\n\n"\
+                                        "3.ሥር የሰደደ ሊምፎይቲክ ሉኪሚያ (CLL)"\
+                                        "CLL በዝግታ የሚሄድ እና የሊምፎይድ ሴሎችን ይጎዳል። በአዋቂዎች ውስጥ በጣም የተለመደው የሉኪሚያ ዓይነት ነው።\n\n"\
+                                        "4.ሥር የሰደደ ማይሎይድ ሉኪሚያ (CML)"\
+                                        " ሲኤምኤል በዝግታ የሚሄድ እና ማይሎይድ ሴሎችን ይጎዳል። ብዙውን ጊዜ በአዋቂዎች ላይ የሚከሰት እና የፊላዴልፊያ (myeloid) የተባለ የጄኔቲክ መዛባትን ያካትታል።\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "ምልክቶች"
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "የተለመዱ የሉኪሚያ ምልክቶች የሚከተሉትን ያካትታሉ፥\n"\
+                                        "ድካም:-\n\n"\
+                                        "ተደጋጋሚ ኢንፌክሽኖች ፥ በተዳከመ የበሽታ መቋቋም ምክንያት:-\n\n"\
+                                        "ቀላል ስብራት እና ደም መፍሰስ ፣ የአፍንጫ ደም መፍሰስ እና የድድ መድማትን ጨምሮ:-\n\n"\
+                                        "የአጥንት ወይም የመገጣጠሚያ ህመም:-\n\n"\
+                                        "ያበጡ (lymph nodes) ፥  በተለይም በአንገት፣ በቭት ወይም በብሽሸት ላይ:-\n\n"\
+                                        "ያልታወቀ ክብደት መቀነስና ፥ የምግብ ፍላጎት ማጣት።\n\n"                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                            
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "መንስኤዎች"
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "የሉኪሚያ ትክክለኛ መንስኤዎች ሙሉ በሙሉ አልታወቀም ፣ ግን ሊሆኑ የሚችሉ ምክናቶች የሚከተሉትን ያካትታሉ፥\n\n"\
+                                        "የዘረመል ተጸኖ ፡ እንደ (Down syndrome) ያሉ አንዳንድ በዘር የሚተላለፉ ሁኔታዎች የሉኪሚያ ተጋላጭነትን ይጨምራሉ።\n\n"\
+                                        "አካባቢያዊ ተጋላጭነት ፡ ለኬሚካሎች እንደ ቤንዚን፣ ጨረር እና አንዳንድ የኬሞቴራፒ መድኃኒቶች ለረጅም ጊዜ መጋለጥ አደጋን ከፍ ያደርገዋል።\n\n"\
+                                        "ማጨስ ፡ በተለይ ከከፍተኛ ማይሎይድ ሉኪሚያ (AML) ጋር የተገናኘ።\n\n"\
+                                        "የቤተሰብ ታሪክ ፡ የሉኪሚያ የቤተሰብ ታሪክ ያላቸው ሰዎች የበለጠ ተጋላጭ ናቸው።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "መከላከል እና የአኗኗር ዘይቤ ምክሮች"
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ሉኪሚያን ሁልጊዜ መከላከል ባይቻልም፣ ለታወቁ የአደጋ መንስኤዎች ተጋላጭነትን መቀነስ እና አጠቃላይ ጤናን መጠበቅ ተገቢ እርምጃዎች ናቸው።\n\n"\
+                                        "ከማጨስ ይቆጠቡ : ማጨስን ማቆም የ AML አደጋን ይቀንሳል።\n\n"\
+                                        "የኬሚካል ተጋላጭነትን ይገድቡ ፡ እንደ ቤንዚን ለመሳሰሉት ካርሲኖጂኖች ተጋላጭነትን መቀነስ ሊረዳ ይችላል።\n\n"\
+                                        "መደበኛ የሕክምና ምርመራዎች : በተለይ በቤተሰብ ውስጥ የሉኪሚያ ታሪክ ላለባቸው ሰዎች።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "ውስብስብ ችገሮች"
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ካልታከመ ሉኪሚያ ወደሚከተለው ሊያመራ ይችላል:-\n\n"\
+                                        "ከባድ የደም ማነስ : ከቀይ የደም ሴሎች ዝቅተኛ ምርት የተነሳ:-\n\n"\
+                                        "የደም መፍሰስ እና የመርጋት ችግሮች ፥ በዝቅተኛ የፕሌትሌት ደረጃዎች ምክንያት:-\n\n"\
+                                        "የሰውነት አካል መጎዳት ፥እንደ ጉበት እና ስፕሊን ባሉ የአካል ክፍሎች ውስጥ ከሚከማቹ ያልተለመዱ ሴሎች\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"

@@ -1,0 +1,115 @@
+<DevdScreen>
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: dp(5)
+        padding: dp(10)
+
+        # Header Section with Navigation Button
+        MDBoxLayout:
+            adaptive_height: True
+            padding: '5dp'
+            pos_hint: {"center_y": .99}
+
+            MDIconButton:
+                icon: "arrow-left"
+                theme_text_color: "Secondary"
+                user_font_size: "24sp"
+                pos_hint: {"center_x": .1, "center_y": .5}
+                on_release: app.switch_to_screen('dev')  # Screen switching here
+
+        # Profile Card
+        MDCard:
+            size_hint: None, None
+            size: "300dp", "350dp"
+            elevation: 5
+            radius: [20,]
+            pos_hint: {"center_x": 0.5}
+            #padding: dp(10)
+            #md_bg_color: 1, 1, 1, 1  # White card background for contrast
+            
+
+            FloatLayout:
+                FitImage:
+                    source: "assets/dev/ki.jpg"
+                    size_hint: 1, 1
+                    fit_mode: 'cover'
+                    halign: "center"
+                    pos_hint: {"center_x": 0.5, "y": 0.1}
+                    #size_hint: None, None
+                    elevation: 8
+                    #padding: dp(10)
+                    radius: [18,]
+        
+        MDLabel:
+            text: "DR. K I Y A"
+            bold: True
+            halign: 'center'
+            font_size: "20sp"
+            size_hint_y: None
+            height: dp(30)
+            font_name: "assets/fonts/Tintsl.ttf"
+        
+        ScrollView:
+            MDGridLayout:
+                cols: 1
+                adaptive_height: True
+                padding: dp(13)
+                spacing: dp(22)
+
+                MDLabel:
+                    id: label_1
+                    text:
+                        "I’m Dr. Kiya Alemayehu, a dermatologist passionate about skin health and wellness. With a deep understanding of the complexities of skin conditions, my goal is to empower my patients to take control of their skin health. Whether it’s tackling acne, eczema, or skin aging, I work closely with my patients to create personalized treatment plans that fit their unique needs. I believe that great skin is a result of a healthy lifestyle, which is why I always encourage my patients to adopt a balanced approach to skincare. My work is driven by my commitment to not only treating the skin but also enhancing my patients’ confidence and well-being. When I’m not in the clinic, I enjoy exploring new dermatological innovations and spending time outdoors. Let’s work together to achieve the healthy, glowing skin you deserve!"
+                    font_name: "assets/fonts/Abyssinica.ttf"
+                    font_size: dp(14)
+                    size_hint_y: None  # Allow dynamic height based on content
+                    height: self.texture_size[1]  # Set height based on text
+                    bold: True
+                    opacity: 1  # Set opacity to 1 for visibility
+        
+
+        MDBoxLayout:
+            orientation: 'vertical'
+            adaptive_height: True
+            padding: dp(10)
+            spacing: dp(10)
+            pos_hint: {"center_x": 0.5}
+
+            MDLabel:
+                text: "Stay Connected with Me"
+                bold: True
+                font_size: "18sp"
+                halign: "center"
+
+            MDBoxLayout:
+                adaptive_height: True
+                spacing: dp(20)
+                pos_hint: {"center_x": 0.5}
+
+
+                MDIconButton:
+                    icon: "send-circle-outline"  # Alternative icon
+                    user_font_size: "28sp"
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.7, 1, 1  # Telegram Blue
+                    on_release: root.open_url("https://t.me/KiyaTelegram")
+
+                MDIconButton:
+                    icon: "github"
+                    user_font_size: "24sp"
+                    on_release: root.open_url("https://yegnaai.github.io/portfolio.web.app-/")
+                
+                MDIconButton:
+                    icon: "gmail"
+                    user_font_size: "28sp"
+                    theme_text_color: "Custom"
+                    text_color: 1, 0, 0, 1  # Red Color
+                    on_release: root.open_url("mailto:Yegnaai@gmail.com")
+
+                
+                
+
+
+
+
+                

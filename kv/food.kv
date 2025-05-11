@@ -1,0 +1,147 @@
+<FoodScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    
+                    MDBoxLayout:
+                        color: 1, 1, 1, 1  # Cool white color
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+                        adaptive_height: True
+
+                                            
+                        MDLabel:
+                            text: "ስፖርትና ምግቦች"
+                            font_name: "assets/fonts/Yeshuah.ttf"
+                            theme_text_color: "Secondary"
+                            # text_color: "Gray"  # Color name for gray
+                            font_size: "19sp"  # Adjust the font size as desired
+                            #color: root.color
+                            halign: 'center'
+                            pos_hint: {"center_x": .5, "center_y": .29}
+                            bold: True
+                            adaptive_height: True
+                        
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('manu')
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    
+                    MDBoxLayout:
+                        ScrollView:
+                            MDGridLayout:
+                                cols: 1/1
+                                padding: dp(11)
+                                spacing: dp(10)
+                                adaptive_height: True
+                                
+                                MDSmartTile:
+                                    radius: 25
+                                    box_radius: [0, 0, 24, 24]
+                                    fit_mode: "cover"
+                                    size_hint: None, None
+                                    size: "220dp", "220dp"
+                                    height: dp(280)
+                                    elevation: 5
+                                    size_hint_x: .5
+                                    on_release: app.switch_to_screen('fooda')
+                                    source: "assets/food/banana.png"
+
+                                    MDLabel:
+                                        text: "ስፖርትና ምግቦች"
+                                        font_name:"assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "20dp"
+                                        theme_text_color: "Secondary"
+
+                                    
+                                MDSmartTile:
+                                    radius: 25
+                                    box_radius: [0, 0, 24, 24]
+                                    fit_mode: "cover"
+                                    size_hint: None, None
+                                    size: "220dp", "220dp"
+                                    height: dp(280)
+                                    elevation: 5
+                                    size_hint_x: .5
+                                    source: "assets/food/green.png"
+                                    on_release: app.switch_to_screen('foodb')
+
+                                    MDLabel:
+                                        text: "ስፖርትና ምግቦች"
+                                        font_name:"assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "20dp"
+                                        theme_text_color: "Secondary"
+
+
+                                MDSmartTile:
+                                    radius: 25
+                                    box_radius: [0, 0, 24, 24]
+                                    fit_mode: "cover"
+                                    size_hint: None, None
+                                    size: "220dp", "220dp"
+                                    height: dp(280)
+                                    elevation: 5
+                                    size_hint_x: .5
+                                    source: "assets/food/mango.png"
+                                    on_release: app.switch_to_screen('foodc')
+
+                                    MDLabel:
+                                        text: "ስፖርትና ምግቦች"
+                                        font_name:"assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "20dp"
+                                        theme_text_color: "Secondary"
+
+                                
+                                MDSmartTile:
+                                    radius: 25
+                                    box_radius: [0, 0, 24, 24]
+                                    fit_mode: "cover"
+                                    size_hint: None, None
+                                    size: "220dp", "220dp"
+                                    height: dp(280)
+                                    elevation: 5
+                                    size_hint_x: .5
+                                    source: "assets/food/foods.jpg"
+                                    on_release: app.switch_to_screen('foode')
+
+                                    MDLabel:
+                                        text:("ቫይታሚኖች")
+                                        font_name:"assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "20dp"
+                                        theme_text_color: "Secondary"
+                                        theme_icon_color: "Custom"
+                                
+                                MDSmartTile:
+                                    radius: 25
+                                    box_radius: [0, 0, 24, 24]
+                                    fit_mode: "cover"
+                                    size_hint: None, None
+                                    size: "220dp", "220dp"
+                                    height: dp(280)
+                                    elevation: 5
+                                    size_hint_x: .5
+                                    source: "assets/food/zoee.png"
+                                    on_release: app.switch_to_screen('foodf')
+
+                                    MDLabel:
+                                        text:("ጠቃሚ ምክሮች")
+                                        font_name:"assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "20dp"
+                                        theme_text_color: "Secondary"
+                                        theme_icon_color: "Custom"

@@ -1,0 +1,124 @@
+<DevaScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: dp(5)
+        padding: dp(10)
+
+        # Header Section with Navigation Button
+        MDBoxLayout:
+            adaptive_height: True
+            padding: '5dp'
+            pos_hint: {"center_y": .99}
+
+            MDIconButton:
+                icon: "arrow-left"
+                theme_text_color: "Secondary"
+                user_font_size: "24sp"
+                pos_hint: {"center_x": .1, "center_y": .5}
+                on_release: app.switch_to_screen('dev')  # Screen switching here
+
+        # Profile Card
+        MDCard:
+            size_hint: None, None
+            size: "300dp", "350dp"
+            elevation: 5
+            radius: [20,]
+            pos_hint: {"center_x": 0.5}
+            #padding: dp(10)
+            #md_bg_color: 1, 1, 1, 1  # White card background for contrast
+            
+
+            FloatLayout:
+                FitImage:
+                    source: "assets/dev/yetb.jpg"
+                    size_hint: 1, 1
+                    fit_mode: 'cover'
+                    halign: "center"
+                    pos_hint: {"center_x": 0.5, "y": 0.1}
+                    #size_hint: None, None
+                    elevation: 8
+                    #padding: dp(10)
+                    radius: [18,]
+
+
+        # Name Label
+        MDLabel:
+            text: "Dr. Y I T B A R E K"
+            bold: True
+            halign: 'center'
+            font_size: "22sp"
+            font_name: "assets/fonts/Tintsl.ttf"
+            #theme_text_color: "Custom"
+            #text_color: 0.2, 0.2, 0.2, 1
+            size_hint_y: None
+            height: dp(40)
+
+        # Bio Section with focused and dynamic text
+        ScrollView:
+            MDGridLayout:
+                cols: 1
+                adaptive_height: True
+                padding: dp(12)
+                spacing: dp(20)
+
+                MDLabel:
+                    id: label_1
+                    text: "I'm Dr. Yitbarek Zeleke, a dedicated medical professional with a passion for advancing healthcare. I specialize in General Medical Practice"
+                    font_name: "assets/fonts/Abyssinica.ttf"
+                    font_size: dp(14)
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    halign: "left"
+                
+                MDLabel:
+                    id: label_1
+                    text: "Healthcare Quality, Patient Safety, and Digital Health. My mission is to improve patient care through innovation and compassion"
+                    font_name: "assets/fonts/Abyssinica.ttf"
+                    font_size: dp(14)
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    halign: "left"
+
+        # Stay Connected Section with clear, inviting text
+        MDBoxLayout:
+            orientation: 'vertical'
+            adaptive_height: True
+            padding: dp(10)
+            spacing: dp(10)
+            pos_hint: {"center_x": 0.5}
+
+            MDLabel:
+                text: "Stay Connected with Me"
+                bold: True
+                font_size: "18sp"
+                halign: "center"
+                theme_text_color: "Primary"
+
+            MDBoxLayout:
+                adaptive_height: True
+                spacing: dp(20)
+                pos_hint: {"center_x": 0.5}
+
+                # Gmail Button
+                MDIconButton:
+                    icon: "gmail"
+                    user_font_size: "32sp"
+                    theme_text_color: "Custom"
+                    text_color: 1, 0, 0, 1  # Red Color for Gmail
+                    on_release: root.open_url("mailto:yitbarekzeleke12@gmail.com")
+
+                # Telegram Button
+                MDIconButton:
+                    icon: "send-circle-outline"  # Alternative icon for Telegram
+                    user_font_size: "32sp"
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.7, 1, 1  # Telegram Blue
+                    on_release: root.open_url("https://t.me/Yitbazel")
+
+                # LinkedIn Button
+                MDIconButton:
+                    icon: "linkedin"
+                    user_font_size: "32sp"
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.5, 1, 1  # LinkedIn Blue
+                    on_release: root.open_url("https://www.linkedin.com/in/yitbarek-zeleke-93146887")

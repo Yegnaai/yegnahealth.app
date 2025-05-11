@@ -1,0 +1,184 @@
+<EyeaScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('eye')
+
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/eye.jpg"
+
+                                MDLabel:
+                                    text: "የዓይን ሞራ ግርዶሽ)"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    halign: "center"  
+
+
+                            MDLabel:
+                                text: 
+                                    "የዓይን ሞራ ግርዶሽ :- የዓይን መነፅር ደመናማ ሲሆን የብርሃን ምንባቡን በመቀነስ ወደ ብዥታ ወይም የእይታ እክል ሲዳርግ ይከሰታል። በተለይም በዕድሜ የገፉ ሰዎች የእይታ መጥፋትን ከሚያስከትሉት በጣም የተለመዱ መንስኤዎች አንዱ ነው ፣ ምንም እንኳን በማንኛውም ዕድሜ ላይ ያሉ ሰዎችን ሊጎዳ ብችልም።\n\n"                                
+                                
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13dp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                                padding: "11dp"
+
+                            
+
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "የዓይን ሞራ ግርዶሽ ምልክቶች"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"  
+                    
+
+
+                            MDLabel:
+                                text: 
+                                    "ብዥ ያለ ወይም የደበዘዘ እይታ።\n\n"\
+                                    "ብርሃን ማየት አለመቻል።\n\n"\ 
+                                    "በዝቅተኛ ብርሃን ሁኔታዎች ውስጥ የማየት ችግር።\n\n"\
+                                    "ቀለሞችን መለየት አለመቻል።\n\n"\
+                                    "በአንድ አይን ውስጥ ድርብ እይታ ብዙም ያልተለመደ ነገር ግን ሊከሰት የሚችል ምልክት።\n\n"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13dp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                                padding: "11dp"
+                                halign: "left"
+                            
+
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "መንስኤዎች"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"  
+                    
+
+
+                            MDLabel:
+                                text: 
+                                    "እርጅና ዋናው ምክንያት ፣ በሌንስ ውስጥ ያሉ ፕሮቲኖች በጊዜ ሂደት ስለሚበላሹ።\n\n"\
+                                    "ለረጅም ጊዜ ለፀሀይ ብርሀን መጋለጥ አደጋን ይጨምራል።\n\n"\ 
+                                    "ማጨስ ከከፍተኛ የዓይን ሞራ ግርዶሽ ጋር የተያያዘ ምክንያቶች አንዱ ነው።\n\n"\
+                                    "በደም ውስጥ ያለው የስኳር መጠን መጨመር ተጋላጭነትን ይጨምራል።\n\n"\
+                                    "የዓይን ሞራ ግርዶሽ የቤተሰብ ታሪክ።\n\n"\
+                                    "ጉዳት ወይም የቀድሞ ቀዶ ጥገና የዓይን ሞራ ግርዶሽ እንዲፈጠር ሊያደርግ ይችላል።\n\n"\
+                                    "መድሃኒቶች ፡ የ(corticosteroids) የረጅም ጊዜ አጠቃቀም።\n\n"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13dp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                                padding: "11dp"
+                                halign: "left"
+                            
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "የዓይን ሞራ ግርዶሽ ዓይነቶች"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"  
+                    
+
+
+                            MDLabel:
+                                text: 
+                                    "የኑክሌር የዓይን ሞራ ግርዶሽ ፡- በሌንስ መሀል የሚፈጠር እና ከእርጅና ጋር የተቆራኘ ነው።\n\n"\
+                                    "ኮርቲካል የዓይን ሞራ ግርዶሽ ፡- በውጭው ጠርዝ ላይ በማደግ ወደ ውስጥ ይሰራጫል።\n\n"\ 
+                                    "ከኋላ ያለው የንዑስ ካፕሱላር የዓይን ሞራ ግርዶሽ በፍጥነት ያደጋሉ።\n\n"\
+                                    "በወሊድ ጊዜ ወይም ገና በልጅነት ጊዜ የሚከሰት ብዙ ጊዜ በጄኔቲክ ምክንያቶች ነው።\n\n"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13dp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                                padding: "11dp"
+                                halign: "left"
+                            
+                            
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "መከላከያ መንገዶች"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"  
+                    
+
+
+                            MDLabel:
+                                text: 
+                                    "የፀሐይ መነፅርን ይልበሱ።\n\n"\
+                                    "ጤናማ አመጋገብ ፡ እንደ ቫይታሚን ሲ እና ኢ ፣ ሉቲን እና ዜአክሳንቲን ያሉ አንቲኦክሲዳንቶችን ያካትቱ።\n\n"\ 
+                                    "ማጨስ ማቆም ፡ በአይን ውስጥ የኦክሳይድ ጭንቀትን ይቀንሳል።\n\n"\
+                                    "ሥር የሰደዱ ሁኔታዎችን ይቆጣጠሩ ፡ የስኳር በሽታን ወይም የደም ግፊትን ይቆጣጠሩ።\n\n"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13dp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                                padding: "11dp"
+                                halign: "left"

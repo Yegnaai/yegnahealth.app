@@ -1,0 +1,229 @@
+<BonecScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+                    
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+                        
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('bone')
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/hand.jpg"
+                                    
+                                MDLabel:
+                                    text:
+                                        "\nየእጅና የጣት ህመም"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    halign: "center"  
+                                
+                                MDLabel:
+                                    text:"የእጅ እና የጣት ችግሮች በተለምዶ በአካል ጉዳት፣በተደጋጋሚ ጭንቀት ወይም እንደ አርትራይተስ ወይም ነርቭ ጉዳዮች ባሉ የጤና ሁኔታዎች ይከሰታሉ።\n"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    halign: "center"  
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "የእጅ አንጓ አጥንት"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ችግር ፥ ይህ የሚሆነው በእጁ አንጓ ውስጥ የሚያልፍ መካከለኛ ነርቭ ስታመም ወይም  ጉዳት ስደርስበት ነው።\n\n"\
+                                        "ምልክቶች :-\n\n"\
+                                        "በአውራ ጣት ፣  ጠቋሚ ጣት ፥ እና በመሃል ጣቶች ላይ የመደንዘዝ ወይም የንዝርት ስሜት።\n\n"\
+                                        "ህመም ወይም ምቾት ማጣት ፣ በተለይም በምሽት።\n\n"\
+                                        "በእጅ  ላይ ድክመት  እቃ መያዘ አለመቻል።\n\n"\
+                                        "መፍትሄ :-\n\n"\
+                                        "እረፍት ፥ ምልክቶችን የሚያባብሱ እንቅስቃሴዎችን ያስወግዱ።\n\n"\
+                                        "ፀረ-ብግነት መድሐኒት (NSAIDs )ህመምን እና እብጠትን ለመቀነስ ይረዳሉ።\n\n"\
+                                        "ቀዶ ጥገና ፥ ከባድ በሆኑ ጉዳዮች ላይ፣ መካከለኛ ነርቭ ላይ ጫና ለመቀነስ ቀዶ ጥገና ያስፈልጋል።\n\n"
+                                
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "ጣቶች ላይ"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ችግር ፥ ይህ ሁኔታ በጅማት እብጠት ምክንያት ጣቶቹ ሲታጠፉ እንዲቆለፉ ወይም እንዲይዘርጉ ያደርጋል።\n\n"\
+                                        "ምልክቶች :-\n\n"\
+                                        "በጣቶቹ ላይ በተለይም በማለዳ ላይ  ጥንካሬና ህመም።\n\n"\
+                                        "ጣት በሚንቀሳቀስበት ጊዜ ብቅ ማለት ወይም የመውጋት  ስሜት።\n\n"\
+                                        "በተጎዳው ጣት ወይም አውራ ጣት ስር ህመም።\n\n"\
+                                        "መፍትሄ :-\n\n"\
+                                        "እረፍት ፡ እጅን የሚወጠሩ እንቅስቃሴዎችን ያስወግዱ።\n\n"\
+                                        "እየዘረጉ እያጠፉ ማሸት።\n\n"
+
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "10dp", 0, "20dp", 0
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "Ganglion Cysts"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                                       
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ችግር ፡ እነዚህ በመገጣጠሚያዎች ወይም ጅማቶች፣ ብዙ ጊዜ በእጅ አንጓ ወይም በእጅ ላይ የሚፈጠሩ ካንሰር ያልሆኑ እብጠቶች ናቸው።\n\n"\
+                                        "ምልክቶች :-\n\n"\
+                                        "መጠኑን ሊቀይር የሚችል ለስላሳ ፣ ክብ ቅርጽ ያለው እብጠት።\n\n"\
+                                        "ሲጫኑ ህመም ወይም ምቾት ማጣት።\n\n"\
+                                        "በተጎዳው አካባቢ ውስጥ የመንቀሳቀስ ስሜት።\n\n"\
+                                        "መፍትሄ :- \n\n"\
+                                        "ምልከታ : ብዙ (ganglion cysts ) በራሳቸው ይጠፋሉ።\n\n"\
+                                        "ቀዶ ጥገና ፡- የ(ganglion cysts) ተደጋጋሚነት ወይም ህመም የሚያስከትል ከሆነ በቀዶ ሕክምና ሊወገድ ይችላል።\n\n"
+                                      
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+                            
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "ማሌት ጣት(Mallet Finger)"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                    
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ችግር ፥ የጣት ጫፉ ቀጥ እንዳይል የሚያደርግ የጅማት ጉዳት አብዛኛውን ጊዜ በአደጋ ምክናት ምከሰት ነው።\n\n"\
+                                        "ምልክቶች :-\n\n"\
+                                        "የጣት ጫፍን ማስተካከል አለመቻል ወይም ማቃናት አለመቻል።\n\n"\
+                                        "በጣት አናት ላይ እብጠት እና ህመም።\n\n"\
+                                        "ሕክምና :-\n\n"\
+                                        "ቀዶ ጥገና ፥ ከባድ በሆኑ ጉዳዮች ወይም አጥንቱ ከተሰበረ ቀዶ ጥገና ሊያስፈልግ ይችላል።\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+
+
+                                
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text: "Flexor Tendon ጉዳቶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ችግር ፥ ጣቶቹን ለማጠፍ በሚረዱት ጅማቶች ላይ የሚደርስ ጉዳት፣ ብዙ ጊዜ በመቁረጥ ወይም በአደጋ ሁኔታ።\n\n"\
+                                        "ምልክቶች :-\n\n"\
+                                        "ጣትን ማጠፍ አለመቻል።\n\n"\
+                                        "በእጅ ወይም በጣት ላይ ህመም እና እብጠት።\n\n"\
+                                        "መፍትሄ ፡-\n\n"\
+                                        "ቀዶ ጥገና : የ(Tendon) ቀዶ ጥገና ብዙውን ጊዜ ያስፈልጋል።\n\n"\
+                                        "አካላዊ ሕክምና :- ከቀዶ ጥገና በኋላ ማገገሚያ ተግባርን ወደነበረበት ለመመለስ አስፈላጊ ነው።\n\n"\
+                                        "ለዘለቄታው ወይም ለከባድ ምልክቶች ፣ የረጅም ጊዜ ጉዳትን ለማስወገድ የጤና አጠባበቅ ባለሙያን ማማከር አስፈላጊ ነው።\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+
+
+

@@ -1,0 +1,115 @@
+<DevcScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: dp(10)
+        padding: dp(16)
+
+                  
+        MDBoxLayout:
+            adaptive_height: True
+            padding: dp(4)
+            spacing: dp(4)
+
+            MDIconButton:
+                icon: "arrow-left"
+                user_font_size: "24sp"
+                on_release: app.switch_to_screen("dev")
+        MDCard:
+            size_hint: None, None
+            size: "300dp", "350dp"
+            elevation: 5
+            radius: [20,]
+            pos_hint: {"center_x": 0.5}
+            #padding: dp(10)
+            #md_bg_color: 1, 1, 1, 1  # White card background for contrast
+            
+
+            FloatLayout:
+                FitImage:
+                    source: "assets/dev/mo.jpg"
+                    size_hint: 1, 1
+                    fit_mode: 'cover'
+                    halign: "center"
+                    pos_hint: {"center_x": 0.5, "y": 0.1}
+                    #size_hint: None, None
+                    elevation: 8
+                    #padding: dp(10)
+                    radius: [18,]
+        
+        # Name Label with focus on warmth
+        MDLabel:
+            text: "Dr. M E N B E R U"
+            bold: True
+            halign: "center"
+            font_style: "H6"
+            size_hint_y: None
+            height: dp(30)
+            font_name: "assets/fonts/Tintsl.ttf"
+
+        # Bio Section with a more engaging tone
+        ScrollView:
+            MDGridLayout:
+                cols: 1
+                adaptive_height: True
+                padding: dp(16)
+                spacing: dp(14)
+
+                MDLabel:
+                    id: label_1
+                    text: "Hi! I'm Dr. Menberu Moges, an Assistant Professor of Obstetrics and Gynecology. I’m passionate about advancing women’s health and sharing my knowledge with future doctors."
+                    font_name: "assets/fonts/Abyssinica.ttf"
+                    font_size: dp(14)
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    halign: "left"
+                
+                MDLabel:
+                    id: label_1
+                    text: "Through my work in both clinical practice and teaching, I aim to make a meaningful impact in healthcare. Let’s connect and make a difference together!"
+                    font_name: "assets/fonts/Abyssinica.ttf"
+                    font_size: dp(14)
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    halign: "left"
+
+            # Stay Connected Section with inviting text
+        MDBoxLayout:
+            orientation: 'vertical'
+            adaptive_height: True
+            padding: dp(10)
+            spacing: dp(10)
+            pos_hint: {"center_x": 0.5}
+
+            MDLabel:
+                text: "Let’s Stay in Touch!"
+                bold: True
+                font_size: "18sp"
+                halign: "center"
+                theme_text_color: "Primary"
+
+            MDBoxLayout:
+                adaptive_height: True
+                spacing: dp(20)
+                pos_hint: {"center_x": 0.5}
+
+        
+                # Telegram Button with calming blue for ease of use
+                MDIconButton:
+                    icon: "send-circle-outline"  # Alternative icon for Telegram
+                    user_font_size: "32sp"
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.7, 1, 1  # Telegram Blue
+                    on_release: root.open_url("https://t.me/closeureyes1")
+
+                # LinkedIn Button with professional blue
+                MDIconButton:
+                    icon: "github"
+                    user_font_size: "24sp"
+                    on_release: root.open_url("https://yegnaai.github.io/portfolio.web.app-/")
+                
+                MDIconButton:
+                    icon: "gmail"
+                    user_font_size: "28sp"
+                    theme_text_color: "Custom"
+                    text_color: 1, 0, 0, 1  # Red Color
+                    on_release: root.open_url("mailto:Yegnaai@gmail.com")

@@ -1,0 +1,111 @@
+<EyeScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    spacing: '10dp'
+                    padding: '10dp'
+
+                    # Top Bar
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '10dp'
+                        spacing: '10dp'
+                        md_bg_color: rgba(255, 255, 255, 0.8)  # Semi-transparent white
+                        radius: [12, 12, 0, 0]
+
+                        MDIconButton:
+                            icon: "arrow-left"
+                            theme_text_color: "Secondary"
+                            on_release: app.switch_to_screen('main')
+
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    # Scrollable Content
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: '20dp'
+                            spacing: '20dp'
+                            adaptive_height: True
+                            size_hint_y: None
+                            height: self.minimum_height
+
+                            # Ear Pain Card
+                            MDCard:
+                                size_hint: 0.45, None
+                                height: "160dp"
+                                radius: [12, 12, 12, 12]
+                                orientation: "vertical"
+                                elevation: 4
+                                ripple_behavior: True
+                                on_release: app.switch_to_screen('eyea')
+
+                                FitImage:
+                                    source: "assets/images/eye.jpg"
+                                    size_hint_y: None
+                                    height: "120dp"
+                                    radius: [12, 12, 0, 0]
+
+                                MDLabel:
+                                    text: "የሞራ ግርዶሽ"
+                                    bold: True
+                                    font_size: "18sp"
+                                    theme_text_color: "Secondary"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    halign: "center"
+                                    valign: "center"
+                                    padding: '10dp'
+
+                            MDCard:
+                                size_hint: 0.45, None
+                                height: "160dp"
+                                radius: [12, 12, 12, 12]
+                                orientation: "vertical"
+                                elevation: 4
+                                ripple_behavior: True
+                                on_release: app.switch_to_screen('eyeb')
+
+                                FitImage:
+                                    source: "assets/images/gla.jpg"
+                                    size_hint_y: None
+                                    height: "120dp"
+                                    radius: [12, 12, 0, 0]
+
+                                MDLabel:
+                                    text:("ግላኮማ")
+                                    bold: True
+                                    font_size: "16dp"
+                                    theme_text_color: "Secondary"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    halign: "center"
+                                    valign: "center"
+                                    adaptive_height: True
+                            MDCard:
+                                size_hint: 0.45, None
+                                height: "160dp"
+                                radius: [12, 12, 12, 12]
+                                orientation: "vertical"
+                                elevation: 4
+                                ripple_behavior: True
+                                on_release: app.switch_to_screen('eyec')
+
+                                FitImage:
+                                    source: "assets/images/de.jpg"
+                                    size_hint_y: None
+                                    height: "120dp"
+                                    radius: [12, 12, 0, 0]
+
+                                MDLabel:
+                                    text:("Retinopathy")
+                                    bold: True
+                                    font_size: "14dp"
+                                    theme_text_color: "Secondary"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    halign: "center"
+                                    valign: "center"
+                                    adaptive_height: True   

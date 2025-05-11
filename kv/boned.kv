@@ -1,0 +1,230 @@
+<BonedScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+                    
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+                        
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('bone')
+
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()                            
+
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/knee.jpg"
+                                
+                                MDLabel:
+                                    text:"\nጉልበት ህመም"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    halign: "center"  
+                                
+                                MDLabel:
+                                    text:"የጉልበት ህመም ፥ በአካል ጉዳት ፣ ከመጠን በላይ ጉልበት ላይ ጨና በማድርስ ወይም በህክምና ሁኔታዎች ሊከሰት የሚችል ጉዳይ ነው። ለጉልበት ህመም የተለመዱ መንስኤዎች፣ ምልክቶች እና የሕክምና አማራጮች አጠቃላይ እይታ ይኸውና።\n"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    halign: "center"  
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "#የጉልበት አርትራይተስ(Osteoarthritis Knee)"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ምልክቶች :-\n\n"\
+                                        "በእንቅስቃሴ ላይ የሚባባስ ህመም።\n\n"\
+                                        "ግትርነት በተለይም ጠዋት ጠዋት ላይ።\n\n"\
+                                        "በመገጣጠሚያው አካባቢ እብጠት ወይም የህመም ሰሜት።\n\n"\
+                                        "ስራመዱ ጉልበት ላይ ድምጾችን መስማት ወይም ስራመዱ ጉልበት ላይ ድንገተኛ ውጋት።\n\n"\
+                                        "መፍትሄ :-\n\n"\
+                                        "መድሃኒቶች :- እንደ አሲታሚኖፊን ወይም NSAIDs ያሉ የህመም ማስታገሻዎች።\n\n"\
+                                        "ካላዊ ሕክምና ፡- በጉልበቱ አካባቢ ያሉትን ጡንቻዎች ማጠናከር በመገጣጠሚያዎች ላይ ያለውን ጭንቀት ይቀንሳል።\n\n"\
+                                        "Cortisone Injections : እብጠትን ይቀንሱ እና ጊዜያዊ እፎይታ ይስጡ።\n\n"\
+                                        "የክብደት አስተዳደር ፡- ክብደትን መቀነስ የጉልበት መገጣጠሚያ ላይ ያለውን ጫና ይቀንሳል።\n\n"
+                                                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "ዘላን ጉልበት (Jumper's Knee)"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ምልክቶች :-\n\n"\
+                                        "በጉልበት ፊትኛው ክፍል ላይ ህመም ፣ ከጉልበት ጫፍ በታች።\n\n"\
+                                        "በመዝለል በመሮጥ ወይም ደረጃ ስውጣ የሚባባስ ህመም ስሜት።\n\n"\
+                                        "በጉልበት አካባብ እብጠት ወይም በፍሳሽ መሞላት።\n\n"\
+                                        "መፍትሄ :-\n\n"\
+                                        "እረፍት ፡- ህመምን የሚቀሰቅሱ እንቅስቃሴዎችን ያስወግዱ።\n\n"\
+                                        "በረዶ እና NSAIDs :- እብጠትን ለመቀነስ።\n\n"\
+                                        "የጉልበት ማሰሪያ በጅማት ላይ ያለውን ጫና ሊቀንስ ይችላል።\n\n"\
+                                        "አካላዊ ሕክምና በመለጠጥ እና በማጠናከር ላይ ያቶኮሩ ስፖርቶች።\n\n"
+
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "10dp", 0, "20dp", 0
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "ACL ጉዳት"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ምልክቶች :-\n\n"\
+                                        "ጉዳት በሚደርስበት ጊዜ ብቅ ወይም ጠንከረ ያለ ድምጽ።\n\n"\
+                                        "ከባድ ህመም እና ፈጣን እብጠት።\n\n"\
+                                        "በጉልበቱ ላይ አለመረጋጋት፣ ክብደትን ለመሸከም አስቸጋሪ ያደርገዋል።\n\n"\
+                                        "መፍትሄ :- \n\n"\
+                                        "እረፍት እና በረዶ መጨናነቅ እና (RICE) ጉዳት ከደረሰ በኋላ ወዲያውኑ ህመምን እና እብጠትን ይቀንሳል።\n\n"\
+                                        "አካላዊ ሕክምና፥ ጥንካሬን እና እንቅስቃሴን መልሶ ለማግኘት።\n\n"\
+                                        "ቀዶ ጥገና ብዙ ጊዜ ለአትሌቶች ወይም ንቁ የአኗኗር ዘይቤ ላላቸው ግለሰቦች ያስፈልጋል።\n\n"
+                                    
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+                            
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "Meniscus Tear"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                    
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ምልክቶች :-\n\n"\
+                                        "በጉልበቱ ላይ ህመም እና እብጠት።\n\n"\
+                                        "በጉልበቱ ላይ የመቆለፍ ወይም የመሳብ ስሜት።\n\n"\
+                                        "ጉልበቱን ሙሉ በሙሉ የመዘረጋት ወይም የማጠፍ ችግር።\n\n"\
+                                        "መፍትሄ :-\n\n"\
+                                        "አካላዊ ሕክምና : በጉልበቱ አካባቢ ያሉትን ጡንቻዎች ለማጠናከር የአካል ብቃት እንቅስቃሴዎች።\n\n"
+                                    
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+
+
+                                
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text: "ቡርሲስ(Bursitis)"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ምልክቶች :-\n\n"\
+                                        "በጉልበቱ አካባቢ እብጠት, ሙቀት ።\n\n"\
+                                        "ህመም በተለይም ጉልበቱን ሲንበረከክ ወይም ሲታጠፍ።\n\n"\
+                                        "መፍትሄ ፡-\n\n"\
+                                        "እረፍት እና በረዶ ፥ እብጠትን ለመቀነስ።\n\n"\
+                                        "NSAIDs ለህመም ማስታገሻ።\n\n"\
+                                        "Cortisone Injections ምልክቶች ከቀጠሉ እብጠትን ለመቀነስ።\n\n"\
+                                        "አዘውትዎ የአካል ብቃት እንቅስቃሴ ማደረግ በጉልበት አካባቢ ያሉትን ጡንቻዎች ማጠናከር።\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+
+
+

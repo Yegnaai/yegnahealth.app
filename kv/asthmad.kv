@@ -1,0 +1,154 @@
+<AsthmadScreen>:
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    # Header Section
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('asthma')
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    # Scrollable Content Section
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/gn.jpg"
+
+                                
+
+                                MDLabel:
+                                    text: "\nጉንፋን"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    halign: "center" 
+
+                                MDLabel:
+                                    text: 
+                                        "\nጉንፋን በቫይረስ አማካኝነት የምከሰት የላይኛው የመተንፍሻ አካላቶችን ማለትም ፣ አፍንጫ እና ገሮሮን የምያጠቃ የተለመደ በሽታ ነው።\n\n"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    halign: "center" 
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "የጉንፋን ምልክቶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "13dp"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ትኩሳት ብርድ ብርድ ማለት ወይም ሳል።\n\n"\
+                                        "የጉሮሮ መቁሰል የጡንቻ ወይም የሰውነት ሕመም።\n\n"\
+                                        "አፍንጫ በንፍጥ መሞላት።"\
+                                        "ራስ ምታትና ድካም።\n\n"\
+                                        "አንዳንድ ግለሰቦች በተለይም ህጻናት ማስታወክ እና ተቅማጥ ሊያጋጥማቸው ይችላል።\n\n"                            
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                            
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#አጋላጭ ሁኔታዎች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "በበሽታው ከተያዙ ሰዎች ጋር በተለይም በተጨናነቁ አካባቢዎች ውስጥ የቅርብ ግንኙነት።\n\n"\
+                                        "እንደ ዕቃዎች ፣ ፎጣዎች ወይም ተደጋግመው የሚነኩ ነገሮችን እንደ የግል ዕቃዎች መጋራት።\n\n"\
+                                        "እንደ ትምህርት ቤቶች ፣ ሆስፒታሎች እና የህዝብ መጠቀምያ ባሉ ቦታውዎች  መጋለጥ።\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "የመከላከያ ዘዴዎች:-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "justify"
+                                
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "አመታዊ የፍሉ ክትባቶች ጉንፋን እና ውስብስብ ችግሮችን ለመከላከል በጣም ውጤታማ መንገድ ናቸው።\n\n"\
+                                        "ቢያንስ ለ 20 ሰከንድ ያህል እጅን በሳሙና እና በውሃ ይታጠቡ።\n\n"\
+                                        "ሳሙና በማይኖርበት ጊዜ አልኮልን መሰረት ያደረጉ የእጅ ማጽጃዎችን ይጠቀሙ።\n\n"\
+                                        "ፊትን በተለይም አይን ፣ አፍንጫን እና አፍን ከመንካት ይቆጠቡ።\n\n"\
+                                        "ጤናማ አመጋገብ መደበኛ የአካል ብቃት እንቅስቃሴ እና በቂ እንቅልፍ ይኑርዎት።\n\n"\
+                                        "ጉንፋን እንደ የሳምባ ምች፣ ብሮንካይተስ፣ የሳይነስ ኢንፌክሽኖች እና ሥር የሰደደ የጤና (ለምሳሌ አስም፣ የልብ በሽታ) ወደ መሳሰሉ ችግሮች ሊያመራ ይችላል። ምልክቶቹ ከተባባሱ ወይም ከቀጠሉ ወደ ሆስፒታል ያምሩ!\n\n"\
+                                        "ለበለጠ ሕክምና ወደ ሆስፒታል ያምሩ!!\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+                                
+                                
