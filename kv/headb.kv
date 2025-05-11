@@ -1,0 +1,324 @@
+<HeadbScreen>:
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    # Header Section
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('head')
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    # Scrollable Content Section
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/noseb.jpg"
+
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "በተለምዶ ነስረ ምንለው ከአፍንጫ የሚፈስ ደም"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp" 
+                                    halign: "center" 
+
+
+
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ከአፍንጫ የምፍሰስ ደም አስፈሪ ሊሆን ይችላል። ነገር ግን ብዙውን ጊዜ የከባድ ነገር ምልክት አይደለም እና ብዙ ጊዜ በቤት ውስጥ ሊታከም ይችላል።\n\n"\
+                                        "አፍንጫው በምደማቤት ወቅት ደም ከአንዱ ወይም ከሁለቱም የአፍንጫ ቀዳዳዎች ይፈስሳል። ከባድ ወይም ቀላል እና ከጥቂት ሰከንዶች እስከ 15 ደቂቃዎች ወይም ከዚያ በላይ ሊቆይ ይችላል።\n\n"                          
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "የምፍሰውን ደም ለማቆም ምን ማድረግ?"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "justify" 
+                        
+
+
+
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "ቁጭ ብለው በትንሹ ለ 10-15 ደቂቃዎች የአፍንጫዎን ለስላሳ ክፍል ከአፍንጫዎችዎ በላይ ቆንጥጠው ይያዙ።\n\n"\
+                                        "ወደ ፊት ዘንበል ይበሉ እና በአፍዎ ይተንፍሱ። ይህ ደም በጉሮሮዎ እንዳይፋስ ይልቅ ደም ወደ አፍንጫዎ እንደፋስ ያደረጋል።\n\n"\ 
+                                        "የበረዶ ጥቅል ወይም ከረጢት በአፍንጫ ላይ ያድርጉ ያቀዘቀዙ።\n\n"\
+                                        "ከመተኛት ይልቅ ቀና ብለው መቆም ይህ በአፍንጫዎ የደም ሥሮች ውስጥ ያለውን የደም ግፊት ስለሚቀንስ ተጨማሪ የደም መፍሰስን ያስወግዳል።\n\n"\
+                                        "ውሎ አድሮ ደሙ ከቆመ ፣ ብዙ ጊዜ የህክምና ምክር ማግኘት አያስፈልግዎትም።\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#በሆስፒታል ውስጥ ተጨማሪ ህክምና የምያስፈልጋችው"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "14dp"
+                                        halign: "justify"   
+
+
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "እንደ የልብ ምት የደም ማነስ የትንፋሽ ማጠር እና የቆዳ መገረጥ ያሉ ምልክቶች ካለቦት።\n\n"\
+                                        "ደም የሚያፋጥን መድሃኒት እየወሰዱ ከሆነ(anticoagulant)።\n\n"\ 
+                                        "1.ከሁለት አመት በታች ያለ ህጻን የአፍንጫ ደም መፍሰስ ካለበት።\n\n"\
+                                        "2.በየጊዜው የምመጣ  እና የምህድ የአፍንጫ ደም ከሆነ።\n\n"\
+                                        "3.ማሳል ወይም የአፍንጫ ፍሳሽ።\n\n"\
+                                        "4.የደም መፍሰሱ ከ 20 ደቂቃዎች በላይ ከሆነ።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                            
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#የተለመዱ የአፍንጫ ደም መንስኤዎች:-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "13dp"  
+
+
+
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "አፍንጫዎን በጠንካራ ሁኔታ መምታት።\n\n"\
+                                        "በአፍንጫዎ ላይ ትንሽ ጉዳት።\n\n"\
+                                        "የአየር ለውጥ የአፍንጫው ውስጠኛ ክፍል እንዲደርቅ እና እንዲሰነጠቅ ያደርጋል።\n\n"\
+                                        "ከሁለት እስከ 10 አመት እድሜ ያላቸው ልጆች እና አረጋውያን።\n\n"\
+                                        "እርጉዝ ሴቶች።\n\n"\
+                                        "የደም መርጋት ችግር ካለብዎት ፣ ወይም ደም ግፊት ካለብዎ መድማቱ ከባድ ያለ ሊሆን ይችላል።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    halign: "left"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#አፍንጫ መድማቱ ከባድ ነው?"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "justify" 
+
+
+
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "አፍንጫ መድማቱ ብዙ ጊዜ ከባድ አይደለም። ይሁን እንጂ ተደጋጋሚ ወይም ከባድ የአፍንጫ ደም መፍሰስ።\n\n"\
+                                        "ከፍተኛ የደም ግፊት ወይም የደም መርጋት መታወክ ያሉ የጤና ችግሮችን ሊያመለክት ይችላል።\n\n"\
+                                        "እና በሆስፒታል ውስጥ ተጨማሪ ሕክምና ሊመረመርበት ይገባል። ረዘም ላለ ጊዜ የሚፈሰው ደም የደም ማነስ ችግር ሊያስከትል ይችላል።\n\n" 
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    padding: "11dp"
+                                    halign: "left"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#ከአፍንጫ የምፍሰስ ደምን መከላከል"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "justify" 
+
+
+
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "ከአፍንጫ የሚፈስ ደም ለመከላከል ማድረግ የሚችሏቸው ነገሮች።\n\n"\
+                                        "#አፍንጫዎን ከመቦረበር ይቆጠቡ እና ጥፍርዎን ያሳጥሩ።\n\n"\
+                                        "#አፍንጫዎ ወይም ጭንቅላትዎ ሊጎዱ በሚችሉ እንቅስቃሴዎች ወቅት የጭንቅላት መከላከያ ያድርጉ።\n\n"\
+                                        "#የአፍንጫ ደም ብዙ ጊዜ ካጋጠመዎት እና እነሱን መከላከል ካልቻሉ ሐኪምዎን ያነጋግሩ።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    halign: "left"
+
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#የአፍንጫ ደም መፍሰስ መንስኤዎች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "justify" 
+
+
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "#የአፍንጫ ደም መፍሰስ በአፍንጫዎ(በፊት) ወይም በአፍንጫዎ ጀርባ (ከኋላ) ውስጥ ሊጀምር ይችላል። እነዚህ የአፍንጫ ደም መፍሰስ መንስኤዎች የተለያዩ ናቸው።\n\n"\
+                                        "1. የፊተኛው የአፍንጫ ክፍል  Anterior nosebleeds\n\n"\
+                                        "2. የሗለኛ የአፍንጫ  ክፍል\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    padding: "11dp"
+                                    halign: "left"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#የፊተኛው የአፍንጫ ክፍል ደም መፍሰስ"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "justify" 
+
+
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "(the lower septum) በአፍንጫዎ ውስጥ ብዙ ትንሽ ደቃቅ የደም ስሮችን ይዟል ይህ አካባቢ በቀላሉ ሊጎዱ ይችላል።\n\n"\
+                                        "የፊተኛው የአፍንጫ ደም መንስኤ አንዳንድ ጊዜ አይታወቅም ነገር ግን በተለያዩ ምክንያቶች ሊከሰቱ ይችላሉ ከእነዚህም መካከል :-\n\n"\
+                                        "1.የአፍንጫዎን ውስጠኛ ክፍል በተሳለ ጥፍር ከቧጠጡ።\n\n"\
+                                        "2.አፍንጫዎን በጠንካራ ሁኔታ መምታት።\n\n"\
+                                        "3.በአፍንጫዎ ላይ ትንሽ ጉዳት እንደ ጉንፋን ባሉ ኢንፌክሽኖች ብዙውን ጊዜ የተዘጋ አፍንጫ ትኩሳት ወይም ሌሎች አለርጂዎች።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#ከኋላ ያለው የአፍንጫ ክፍል ደም መፍሰስ"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "justify" 
+
+
+
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "ጥቂት ቁጥር ያላቸው የአፍንጫ ደም ፈሳሾች ከኋላ ያሉ ናቸው። ይህ ማለት ደግሞ ደም የሚፈሰው በደም ወሳጅ ቧንቧዎች ቅርንጫፎች አማካኝነት ደምን በአፍንጫው ውስጥ በአፍዎ ጣሪያ እና በአንጎልዎ መካከል ባለው ክፍተት ነው።\n\n"\
+                                        "እነዚህ የአፍንጫ ደም መፍሰስ ከልጆች ይልቅ በአዋቂዎች ላይ በብዛት ይገኛሉ። እነሱ ላይ ከመጀመረያው ነስረ የበለጠ ከባድ ሊሆኑ እና ብዙ ደም ልፈሳቸው ይችላ። የሕክምና ክትትል ሊያስፈልግ የግድ ነው።\n\n"\
+
+                                        "  #ከኋላ ያለው የአፍንጫ ደም መፍሰስ መንስኤዎች :-\n\n"\
+                                        "1.ጭንቅላት ላይ መምታት ወይም መውደቅ።\n\n"\
+                                        "2.የተሰበረ አፍንጫ የቅርብ ጊዜ የአፍንጫ ቀዶ ጥገና።\n\n"\
+                                        "3.በቀላሉ ደም እንዲፈሱ የሚያደርጉ መድሃኒቶች።\n\n"\
+                                        "4.በአፍንጫው ክፍል ውስጥ ዕጢ።\n\n"\
+                                        "5.(HHT)-የደም ሥሮችን የሚጎዳ በዘር የሚተላለፍ የጄኔቲክ ሁኔታ ናቸው።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "ጥንቃቄ"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "justify" 
+
+
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "ከላይ ያሉት ሕክምናዎች የማይረዱ ከሆነ ለበለጠ ሕክምና ወደ ሆስፒታል ያምሩ።\n\n"                                
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    padding: "11dp"
+                                    halign: "left"

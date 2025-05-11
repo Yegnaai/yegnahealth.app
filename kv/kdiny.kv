@@ -1,0 +1,162 @@
+<KdinyScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    
+                    MDBoxLayout:
+                        color: 1, 1, 1, 1  # Cool white color
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+                        adaptive_height: True
+                        
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('main')
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+                                       
+                    MDBoxLayout:
+                        orientation: "vertical"
+                        pos_hint: {"center_y": .5}
+                        ScrollView:
+                            MDGridLayout:
+                                cols: 1
+                                padding: "28dp"
+                                spacing: "20dp"
+                                adaptive_height: True
+                                size_hint_y: None
+                                height: self.minimum_height
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('kdinya')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/ckd.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("ሥር የሰደደ የኩላሊት በሽታ")
+                                        bold: True
+                                        font_size: "15dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('kdinyb')
+                                    orientation: "vertical"
+                                    elevation: 5
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/utc.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የሽንት ቧንቧ ኢንፌክሽን")
+                                        bold: True
+                                        font_size: "15dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('kdinyc')
+                                    orientation: "vertical"
+                                    elevation: 5
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/kds.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የኩላሊት ጠጠር")
+                                        bold: True
+                                        font_size: "15dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('kdinyd')
+                                    orientation: "vertical"
+                                    elevation: 5
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/kdss.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የኩላሊትና የፊኛ በሽታዎች")
+                                        bold: True
+                                        font_size: "15dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_press: root.switch_to_etho()
+                                    orientation: "vertical"
+                                    elevation: 5
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/home.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text: "የኢትዮጵያ የኩላሊት ማህበር"
+                                        bold: True
+                                        font_size: "13dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"

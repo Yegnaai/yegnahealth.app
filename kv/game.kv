@@ -1,0 +1,111 @@
+<GameScreen>:
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    
+                    MDBoxLayout:
+                        color: 1, 1, 1, 1  # Cool white color
+                        adaptive_height: True
+                        padding: '14dp'
+                        pos_hint: {"center_y": .99}
+                        adaptive_height: True
+                        
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('manu')
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+                            adaptive_height: True                        
+                        
+                        
+                    MDBoxLayout:
+                        ScrollView:
+                            MDGridLayout:
+                                cols: 2
+                                padding: dp(18)
+                                spacing: dp(20)
+                                adaptive_height: True
+                                
+
+                                MDSmartTile:
+                                    radius: 25
+                                    box_radius: [0, 0, 24, 24]
+                                    source: "assets/images/game.jpg"
+                                    fit_mode: "cover"
+                                    size_hint: None, None
+                                    size: "220dp", "220dp"
+                                    height: dp(180)
+                                    elevation: 5
+                                    size_hint_x: .5
+                                    on_release: root.open_url("https://github.com/Yegnaai/yegna")
+                                    adaptive_height: True
+                                    
+                                    MDLabel:
+                                        text: "level-devil Game"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "13sp"
+                                        adaptive_height: True
+                                        theme_text_color: "Custom"
+                                        text_color: 1, 1, 1, 1
+
+                                
+                                MDSmartTile:
+                                    radius: 25
+                                    box_radius: [0, 0, 24, 24]
+                                    #box_color:  1, .1, .3, .3
+                                    source: "assets/images/wo.png"
+                                    pos_hint: {"center_x": .10, "center_y": .55}
+                                    fit_mode: "cover"
+                                    size_hint: None, None
+                                    size: "220dp", "220dp"
+                                    height: dp(180)
+                                    elevation: 5
+                                    size_hint_x: .5
+                                    on_release: root.open_url("https://github.com/Yegnaai/yegna")
+                                    adaptive_height: True
+
+                              
+                                    MDLabel:
+                                        text:("የቃላት ጫዋታ")
+                                        font_name:"assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "13sp"
+                                        theme_text_color: "Custom"
+                                        text_color: 1, 1, 1, 1
+                                        adaptive_height: True
+
+                                        
+                                MDSmartTile:
+                                    radius: 25
+                                    box_radius: [0, 0, 24, 24]
+                                    #box_color:  6, .16, .16, .6
+                                    source: "assets/images/to.png"
+                                    pos_hint: {"center_x": .10, "center_y": .55}
+                                    fit_mode: "cover"
+                                    size_hint: None, None
+                                    size: "220dp", "220dp"
+                                    height: dp(180)
+                                    elevation: 5
+                                    size_hint_x: .5
+                                    on_release: root.open_url("https://github.com/Yegnaai/yegna")
+                                    adaptive_height: True
+
+
+                                    MDLabel: 
+                                        text:("ToDo App")
+                                        font_name:"assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "13sp"
+                                        theme_text_color: "Custom"
+                                        text_color: 1, 1, 1, 1
+                                        adaptive_height: True
+                                        

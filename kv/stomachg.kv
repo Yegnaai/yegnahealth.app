@@ -1,0 +1,173 @@
+<StomachgScreen>:
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('stomach')
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/kintarot.jpg"
+
+                                
+
+                                MDLabel:
+                                    text:"\nኪንታሮት"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    halign: "center"
+
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "በፊንጢጣዎ ውስጥ ያበጡ ደም መላሽ የደም ስሮች ሄሞሮይድስ ይባላሉ። ውስጣዊ ሄሞሮይድስ በፊንጢጣ ወይም በታችኛው የኩስቋት ውስጥ ይከሰታል። አንዳንዴ ከፊንጢጣ ውጭ ሊያድጉ እና ሊወጠሩ ይችላሉ።\n\n"\
+                                        "ውጫዊ ሄሞሮይድስ በፊንጢጣ አካባቢ ባለው ቆዳ ላይ ይከሰታል። ትክክለኛው መንስኤ ምን እንደሆነ ባይታወቅም፤ አስተዋፅዖ ያላቸው ምክንያቶች በፊንጢጣ ውስጥ ባሉት የደም ቧንቧዎች ላይ ጫና እንደሚፈጥሩ ይታመናል። የሆድ ድርቀት እና እርግዝና የፊንጢጣ ግፊት መጨመር ሊያስከትል ይችላል።\n\n"                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    MDLabel:
+                                        text: "#የውስጥ ኪንታሮት ምልክቶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "13dp"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ውስጣዊ ሄሞሮይድስ አብዛኛውን ጊዜ ህመም የለውም። ነገር ግን ሲታዩ ምልክቶቹ የሚከተሉትን ሊያካትቱ ይችላሉ :-\n\n"\
+                                        "በአንጀት እንቅስቃሴ ወቅት ህመም የሌለው ከፊንጢጣ የምፋስ ደም መፍሰስ ብዙውን ጊዜ ህመም የሌለው ሽንት ቤት ከተጠቀሙ በኋላ ደማቅ ቀይ ደም ሊያዩ ይችላሉ።\n\n"\
+                                        "በጭንቀት ጊዜ ሄሞሮይድስ ብቅ ማለት ፣ በራሳቸው ወደ ኋላ ሊያፈገፍጉ ወይም በእጅ ግፋ ማርግ ያስፈልገዋል።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    MDLabel:
+                                        text: "#የውጫዊ ኪንታሮት ምልክቶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "13dp"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "በፊንጢጣ አካባቢ ህመም ወይም ምቾት ማጣት።\n\n"\
+                                        "ውጫዊ ሄሞሮይድ አንዳንድ ጊዜ በፊንጢጣ ጠርዝ ላይ በጣም የሚያሠቃይ ሰማያዊ/ሐምራዊ እብጠት ሊሆን ይችላል።\n\n"\
+                                        "በፊንጢጣ አካባቢ እብጠት።\n\n"\
+                                        "በፊንጢጣ አካባቢ ማሳከክ ወይም ብስጭት።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                            
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#አጋላጭ ሁነታ"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "በታችኛው ፊንጢጣ ውስጥ ያለው ግፊት መጨመር በሰገራ እንቅስቃሴ ወቅት በሚፈጠር ውጥረት ወይም በመጸዳጃ ቤት ላይ ረዘም ላለ ጊዜ መቀመጥ።\n\n"\
+                                        "ሥር የሰደደ የሆድ ድርቀት ወይም ተቅማጥ።\n\n"\
+                                        "እርግዝና (በሆድ ግፊት መጨመር እና በሆርሞን ለውጦች ምክንያት)- ውፍረት ይህም የፊንጢጣ ግፊት ሊጨምር ይችላል።\n\n"\
+                                        "እርጅና (የተዳከመ የፊንጢጣ እና የፊንጢጣ ቲሹ)።\n\n"\
+                                        "ዝቅተኛ-ፋይበር አመጋገብ ወደ የሆድ ድርቀት የሚመራ።\n\n"\
+                                        "የአካል ብቃት እንቅስቃሴ እጥረት።\n\n"\
+                                        "ጄኔቲክስ ወይም የቤተሰብ ታሪክ።\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#መከላከል"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "justify"
+                                
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "የተቀነባበሩ ወይም ዝቅተኛ ፋይበር የያዙ ምግቦችን ያስወግዱ።\n\n"\
+                                        "በመጸዳጃ ቤት ውስጥ ለረጅም ጊዜ አይቀመጡ።\n\n"\
+                                        "የሆድ ድርቀትን ለመቀነስ እና የአንጀት ጤናን ለማሻሻል መደበኛ የአካል ብቃት እንቅስቃሴ ያድርጉ።\n\n"\
+                                        "ሰገራ ለስላሳ እንዲሆን በቂ ፈሳሽ ይጠጡ።\n\n"\
+                                        "የሆድ ግፊትን መቀነስ የሄሞሮይድ አደጋን ይቀንሳል።\n\n"\
+                                        "በተገቢው እንክብካቤ እና ህክምና, ሄሞሮይድስ ብዙውን ጊዜ ሊታከም የሚችል እና ሊፈታ ይችላል። ይሁን እንጂ ሥር የሰደደ ወይም ያልታከመ ሄሞሮይድስ እንደ የደም ማነስ (ከረጅም ጊዜ ደም መፍሰስ) ወይም ኢንፌክሽኖች ወደ ውስብስብ ችግሮች ሊያመራ ይችላል።\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"

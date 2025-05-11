@@ -1,0 +1,150 @@
+<StomachbScreen>:
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('stomach')
+                            
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/yechku.jpg"
+
+                                
+
+                                MDLabel:
+                                    text:"\nየጮጋራ ቁስለት"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    halign: "center"  
+
+                                MDLabel:
+                                    text: 
+                                        "\nበጨጓራ ​​አሲድ ምርት እና የሆድ ሽፋንን በሚከላከለው የ mucosal መከላከያ ዘዴዎች መካከል ባለው አለመመጣጠን ምክንያት የምከሰት ህመም ነው።\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#የጮጋራ ቁስለት ምልክቶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "13dp"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ምግብ ስንመገብ ወይም ማታ ማታ የሚያቃጥል ስሜት።\n\n"\
+                                        "እብጠት ማቅለሽለሽ ወይም ማስታወክ።\n\n"\
+                                        "የምግብ ፍላጎት ማጣት ጠቆር ያለ ወይም የሚዘገይ ሰገራ የደም መፍሰስን ያመለክታል።\n\n"\
+                                        "አልፎ አልፎ ደም ማስታወክ።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                            
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#አጋላጭ ሁነታ"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "የ(mucous) ሽፋን የሚያዳክም ባክቴሪያ።\n\n"\
+                                        "እንደ (ibuprofen ወይም naproxen) ያሉ መድኃኒቶች የሆድ ዕቃን ሊያበሳጩ ይችላሉ።\n\n"\
+                                        "ከመጠን በላይ አልኮል መጠጣት የአሲድ ምርትን እና የ mucosal መሸርሸርን ይጨምራል።\n\n"\
+                                        "ማጨስ የቁስል ፈውስን ያዘገያል እና የጮጋራ ቁስለት አደጋን ይጨምራል።\n\n"\
+                                        "ውጥረት ቀጥተኛ መንስኤ ባይሆንም ጭንቀት ምልክቶችን ሊያባብስ ይችላል።\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#መከላከል"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "justify"
+                                
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ንጹህ የመጠጥ ውሃ እና ትክክለኛ የምግብ አያያዝን ምርጫዎ ያደረጉ።\n\n"\
+                                        "ሆዱን የሚያበሳጩ ምግቦችን እና መጠጦችን ያስወግዱ (ለምሳሌ ካፌይን, አልኮል)።\n\n"\
+                                        "ህመም ምያስከትሉ ምግቦችን ይለዩ።\n\n"\
+                                        "ማጨስ ማቆም።\n\n"\
+                                        "ምንም እንኳን ኤች.አይ.ፒሎሪ ክትባት ባይኖርም የህብረተሰብ ጤና ግንዛቤ ዘመቻዎች የኢንፌክሽኑን መጠን ሊቀንስ ይችላል።።\n\n"\
+                                        "በመዝናኛ ዘዴዎች ወይም በሕክምና አማካኝነት ጭንቀትን ይቆጣጠሩ።\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"

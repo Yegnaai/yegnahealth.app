@@ -1,0 +1,163 @@
+<KdinybScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('kdiny')
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/utc.jpg"
+                                
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "የሽንት ቧንቧ ኢንፌክሽን"
+
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "20sp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+                                
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "የተለመደ ኢንፌክሽን ሲሆን ይህም የሽንት ስርአቱን ክፍሎች ማለትም ፊኛ፣ urethra፣ ureter እና ኩላሊትን ያጠቃልላል። UTIs በማንኛውም የሽንት ቱቦ ውስጥ ሊከሰት ይችላል።\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "16sp"
+                                    halign: 'center'
+                                    theme_text_color: "Hint"
+                                    adaptive_height: True
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "ምልክቶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "የተለመዱ ምልክቶች የሚከተሉትን ያካትታሉ፥\n\n"\
+                                        "በሽንት ጊዜ የሚያሰቃይ ወይም የሚቃጠል ስሜት ፥ የታወቀ ምልክት።\n\n"\
+                                        "ተደጋጋሚ የሽንት መሻት ፥ ብዙ ጊዜ ትንሽ ሽንት ብቻ ሲያልፍ።\n\n"\
+                                        "ደመናማ ወይም ኃይለኛ ሽታ ያለው ሽንት ፥ ኢንፌክሽንን ሊያመለክት ይችላል።\n\n"\
+                                        "የዳሌ ህመም ፥ በተለይም በሴቶች ላይ፣ ብዙ ጊዜ  በብልት አጥንት አካባቢ።\n\n"\
+                                        "በሽንት ውስጥ ያለ ደም ፥ በምርመራ የተገኘ የሚታይ ደም ወይም ደም ሊከሰት ይችላል።\n\n"\
+                                        "በከባድ ሁኔታዎች ኢንፌክሽኑ ወደ ኩላሊት ከደረሰ ምልክቶቹ ትኩሳት፣ ብርድ ብርድ ማለት እና የጎን ህመምን ሊያካትቱ ይችላሉ።\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "መንስኤዎች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ዩቲአይኤስ በተለምዶ ወደ ሽንት ቱቦ በሚገቡ ባክቴሪያዎች የሚከሰቱ ናቸው።"\
+                                        "በጣም የተለመደው ተህዋሲያን  (Escherichia coli) ሲሆን ይህም በተለምዶ በጨጓራና ውስጥ ይገኛል።\n\n"\
+                                        "መንስኤዎች የሚከተሉትን ያካትታሉ:-\n\n"\
+                                        "የሴት የሰውነት አካል ፡- ሴቶች በአጭር የሽንት ቱቦ ምክንያት በቀላሉ ይጋለጣሉ።\n\n"\
+                                        "የወሲብ ተግባር :- አደጋን ይጨምራል፣ በተለይ ንፅህና በደንብ ካልተጠበቀ።\n\n"\
+                                        "አንዳንድ የጤና ሁኔታዎች :- የስኳር በሽታ፣ የኩላሊት ጠጠር እና የፕሮስቴት እጢ መጨመር የ UTI ስጋትን ይጨምራሉ።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "14dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "መከላከል"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "የ UTIs አደጋን ለመቀነስ ብዙ መንገዶች አሉ:-\n\n"\
+                                        "የሰውነትን የውሃ መጠን መጨመር :- ብዙ ውሃ መጠጣት ባክቴሪያዎችን ለማስወገድ ይረዳል።\n\n"\
+                                        "አዘውትሮ መሽናት :- ሽንትን ለረጅም ጊዜ ከመያዝ ይቆጠቡ።\n\n"\
+                                        "ጥሩ ንጽህናን ይለማመዱ ፡- ባክቴሪያን ወደ ሽንት ቱቦ ውስጥ ላለማስገባት ከፊት ወደ ኋላ ይታጠብ።\n\n"\
+                                        "ከግብረ ሥጋ ግንኙነት በኋላ መሽናት ፡- ይህ በጾታዊ እንቅስቃሴ ወቅት የሚመጡትን ባክቴሪያዎችን ለማስወገድ ይረዳል።\n\n"\
+                                        "UTIs ብዙውን ጊዜ ሊታከሙ የሚችሉ እና ብዙ ጊዜ በትክክለኛ አንቲባዮቲኮች በጥቂት ቀናት ውስጥ ይጠፋሉ፣ ነገር ግን ተደጋጋሚ UTIs የበለጠ ሰፊ የመከላከያ ዘዴዎችን ሊፈልጉ ይችላሉ። በተለይም ኢንፌክሽኑ ወደ ኩላሊት ከተዛመተ ችግሮችን ለመከላከል ቀደምት ምርመራ እና ህክምና ቁልፍ ናቸው።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "14dp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                            
+                            

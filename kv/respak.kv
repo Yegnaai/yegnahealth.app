@@ -1,0 +1,186 @@
+<RespakScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('respa')
+
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/bra.jpg"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "የጡት ካንሰር"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "20sp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "የጡት ካንሰር በጡት ህዋሶች ውስጥ የሚፈጠር የካንሰር አይነት ሲሆን አብዛኛውን ጊዜ በወተት ቱቦዎች ወይም ሎቡልስ ውስጥ ነው። የሚከሰተው በጡት ውስጥ ያሉ ህዋሶች ከቁጥጥር ውጭ በሆነ ሁኔታ ሲያድጉ እና ዕጢ ሲፈጠሩ ነው። ካልታከመ ወደ ሌሎች የሰውነት ክፍሎች ሊሰራጭ ይችላል።(metastasize)\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "15dp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+
+                                    MDLabel:
+                                        text: "ምልክቶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "የጡት ካንሰር ምልክቶች እንደ ካንሰር ደረጃ እና አይነት ይለያያሉ። የተለመዱ ምልክቶች የሚከተሉትን ያካትታሉ:-\n\n"\
+                                        "ከጡት ወይም ከክብት በታች እብጠት የተለመደ ምልክት።\n\n"\
+                                        "የጡት መጠን ወይም ቅርፅ ለውጥ።\n\n"\
+                                        "የጡት ወይም የጡት ጫፍ ህመም።\n\n"\
+                                        "የጡት ቆዳን መበሳት ወይም መበሳት።\n\n"\
+                                        "የተገለበጠ የጡት ጫፍ ወደ ውስጥ።\n\n"\
+                                        "የጡት ጫፍ ወይም የጡት ቆዳ መቅላት ወይም መወፈር።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+
+                                    MDLabel:
+                                        text: "መንስኤዎች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "የጡት ካንሰር አንድም ምክንያት የለም ፣ ግን ብዙ ምክንያቶች አደጋን ይጨምራሉ:-\n\n"\
+                                        "ጄኔቲክ ሚውቴሽን።\n\n"\
+                                        "የቤተሰብ ታሪክ።\n\n"\
+                                        "የሆርሞን ደረጃዎች።\n\n"\
+                                        "እርጅና በሴቶች ላይ በብዛት ይታያል ከ50 በላይ።\n\n"\
+                                        "ውፍረት ስብ ቲሹ ኢስትሮጅንን ስለሚጨምር ለካንሰርን እድገት አስተዋፅ ያደርጋል።\n\n"\
+                                        "ማጨስ እና አልኮል መጠጣት።\n\n"\
+                                        "ለጨረር መጋለጥ በደረት ላይ ያለፈው የጨረር ህክምና አደጋን ይጨምራል።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+
+                                    MDLabel:
+                                        text: "መከላከል"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "መደበኛ ምርመራ እና ማሞግራም (ከ40-50 አመት ጀምሮ)።\n\n"\
+                                        "ጤናማ ክብደት እና አመጋገብ።\n\n"\
+                                        "አልኮሆልንና ማጨስ ማቆም።\n\n"\
+                                        "ጡት ማጥባት ለኤስትሮጅን ተጋላጭነትን ይቀንሳል።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+
+                                    MDLabel:
+                                        text: "የህክምና ባለሞያ መች ላግኝ"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "በጡት ወይም በብብት ላይ አዲስ እብጠት።\n\n"\
+                                        "የጡት ጫፍ ፈሳሽ በተለይም ደም።\n\n"\
+                                        "የቆዳ ለውጦች መቅላት ፣ መወፈር ወይም መፍዘዝ።\n\n"\
+                                        "በጡት ላይ የማይጠፋ የማይታወቅ ህመም።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+

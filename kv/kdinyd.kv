@@ -1,0 +1,205 @@
+<KdinydScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('kdiny')
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/kdss.jpg"
+
+                                
+                                MDLabel:
+                                    text:("የኩላሊትና የፊኛ በሽታዎች\n\n")
+
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "20sp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "አጣዳፊ የኩላሊት ጉዳት (AKI)"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "15sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "የኩላሊት ተግባር በድንገት ማሽቆልቆል ፣ በተለይም በሰአታት ወይም በቀናት ውስጥ : በደም ውስጥ የሚባክኑ ምርቶች እንዲከማቹ፣የፈሳሽ አለመመጣጠን እና የኤሌክትሮላይት መዛባት ሊያስከትል ይችላል፤ይህም ህክምና ካልተደረገለት ለሕይወት አስጊ ነው።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                
+                                    MDLabel:
+                                        text:"ምልክቶች"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15sp"
+                                        adaptive_height: True
+                                        theme_text_color: "Secondary"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "የ AKI ምልክቶች በክብደቱ እና በዋና መንስኤው ላይ ተመስርተው ይለያያሉ : የተለመዱ ምልክቶች የሚከተሉትን ያካትታሉ:-\n\n"\
+                                        "ፈሳሽ ማቆየት :- በእግሮች, በቁርጭምጭሚቶች ወይም በአይን አካባቢ እብጠት።\n\n"\
+                                        "ድካም እና ግራ መጋባት ፥ በደም ውስጥ ባለው መርዛማ ንጥረ ነገር ክምችት ምክንያት።\n\n"\
+                                        "ማቅለሽለሽ እና ማስታወክ  ፥ ብዙውን ጊዜ ከሜታቦሊክ ቆሻሻ መገንባት ጋር ይዛመዳል።\n\n"\
+                                        "የትንፋሽ ማጠር ፥ ፈሳሽ ከመጠን በላይ በመብዛቱ የሳንባን ተግባር ሊጎዳ ይችላል።\n\n"\
+                                        "የደረት ህመም ፥ በከባድ ሁኔታ በልብ አካባቢ ያለው ፈሳሽ ምቾት ማጣት ያስከትላል።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                
+                                    MDLabel:
+                                        text:"መንስኤዎች"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15sp"
+                                        adaptive_height: True
+                                        theme_text_color: "Secondary"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ቅድመ-የኩላሊት መንስኤዎች ፡- ወደ ኩላሊት የደም ዝውውርን የሚቀንሱ እንደ ድርቀት፣ የልብ ድካም ወይም የደም ማጣት ያሉ ሁኔታዎች።\n\n"\
+                                        "ውስጥ መንስኤዎች ፡- በኩላሊቶች ውስጥ የሚደርስ ጉዳት፣ ብዙ ጊዜ በኢንፌክሽን፣ በመርዛማ ወይም በኩላሊት ቲሹ እብጠት።\n\n"\
+                                        "ከኩላሊት በኋላ የሚፈጠሩ ምክንያቶች ፡ የሽንት ፍሰትን እንቅፋት ለምሳሌ የኩላሊት ጠጠር፣ የፕሮስቴት እጢ ወይም እጢ።\n\n"\
+                                        "ለAKI የሚያጋልጡ ምክንያቶች እርጅና፣ ነባር የኩላሊት በሽታ፣ የስኳር በሽታ፣ የልብ ሕመም፣ እና በሕክምና ምስል ወቅት ለኔፍሮቶክሲክ መድኃኒቶች ወይም ንፅፅር ማቅለሚያዎች መጋለጥን ያካትታሉ።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                
+                                    MDLabel:
+                                        text:"መከላከል"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15sp"
+                                        adaptive_height: True
+                                        theme_text_color: "Secondary"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "AKI መከላከል ብዙውን ጊዜ የአደጋ መንስኤዎችን መቆጣጠር እና የኩላሊት ጭንቀቶችን ማስወገድን ያካትታል፡\n\n"\
+                                        "ውሃ ይጠጡ ፥ በቂ የሆነ ውሃ አስፈላጊ ነው፣ በተለይም በህመም ወይም በከባድ እንቅስቃሴ ወቅት።\n\n"\
+                                        "መድሃኒቶችን ይቆጣጠሩ ፡- NSAIDsን ከመጠን በላይ ከመጠቀም ይቆጠቡ፣ እና የኩላሊት ስራን ሊጎዱ ከሚችሉ መድሃኒቶች ይጠንቀቁ፣ በተለይም ለአደጋ የተጋለጡ።\n\n"\
+                                        "ሥር የሰደዱ ሁኔታዎችን ይቆጣጠሩ ፡ የስኳር በሽታን፣ የደም ግፊትን እና የልብ ሕመምን መቆጣጠር አደጋን ይቀንሳል።\n\n"\
+                                        "መደበኛ ምርመራዎች ፥ ተደጋጋሚ ክትትል የኩላሊት ስራ ማቆም የመጀመሪያ ምልክቶችን ለመለየት ይረዳል።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                            
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.5
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+                                
+                                Image:
+                                    source: "assets/images/pkdd.png"
+                                    size_hint: None, None
+                                    size: "150dp", "150dp"
+                                    fit_mode: "contain"  # Replaces allow_stretch/keep_ratio
+                                    pos_hint: {"center_x": 0.5}
+
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "Polycystic Kidney Disease (PKD)"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "20sp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "PKD ለከፍተኛ የደም ግፊት እና የኩላሊት ውድቀት አደጋን ይጨምራል\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "16sp"
+                                    halign: 'center'
+                                    theme_text_color: "Hint"
+                                    adaptive_height: True
+
+                                MDLabel:
+                                    text:"በቅርብ ቀን በተሻለ አገልገሎት ይጠብቁን\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "19sp"
+                                    halign: 'center'
+                                    theme_text_color: "Hint"
+                                    adaptive_height: True
+
+                                

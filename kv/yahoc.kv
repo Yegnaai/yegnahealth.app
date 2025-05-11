@@ -1,0 +1,254 @@
+<YahocScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                BoxLayout:
+                    orientation: 'vertical'
+                    adaptive_height: True
+
+                    MDBoxLayout:
+                        orientation: 'horizontal'
+                        adaptive_height: True
+                        padding: "2dp", 0, "2dp", 0
+                        pos_hint: {"center_y": .92}
+                        adaptive_height: True
+
+                        MDCard:
+                            size_hint: 0.9, None  
+                            height: "220dp"
+                            orientation: "vertical"
+                            elevation: 4
+                            FitImage:
+                                source: "assets/images/ye.jpg"
+                                size_hint_y: None
+                                height: "280dp"
+                                radius: [12, 12, 0, 0]
+                    MDIconButton:
+                        icon: "close"
+                        md_bg_color: 1, 1, 1, .6
+                        x: 12
+                        pos_hint: {"top": .99}
+                        on_release: app.switch_to_screen('yaho')
+
+                    ScrollView:
+                        MDList:
+                            padding: [10, 0, 20, 0]
+
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text:("#የቫይረስ ሄፓታይተስ ኢንፌክሽን")
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"
+
+
+                            MDLabel:
+                                text:
+                                    "ሄፓታይተስ  ኢንፌክሽን ምክንያት የሚከሰት የጉበት እብጠት ነው። በጣም የተለመዱት የቫይረስ ሄፓታይተስ ዓይነቶች ሄፓታይተስ ኤ፣ቢ እና ሲ ናቸው።\n\n"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                            
+
+
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "#ምልክቶች:-"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+
+                            MDLabel:
+                                text:
+                                    "\n"\
+                                    "የቫይረስ ሄፓታይተስ ምልክቶች እንደ ቫይረሱ አይነት እና እንደ ኢንፌክሽኑ ክብደት ሊለያዩ ይችላሉ። ከተለመዱት ምልክቶች መካከል ድካም ፣ ማቅለሽለሽ ፣"\ 
+                                    "የምግብ ፍላጎት ማጣት፣ አገርጥቶትና (የቆዳና የአይን ቢጫ) እና የሆድ ህመም ናቸው። በከባድ ሁኔታዎች, እንደ የጉበት አለመሳካት የመሳሰሉ ችግሮች ሊከሰቱ ይችላሉ።\n\n"                                    
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "#አጋላጭ_ሁኔታዎች:-"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                            
+                            MDLabel:
+                                text:
+                                    "\n"\
+                                    "ለቫይራል ሄፓታይተስ ከሚያጋልጡ ምክንያቶች መካከል ለተበከለ ደም ወይም የሰውነት ፈሳሾች መጋለጥ(ለምሳሌ በመርፌ የመድሃኒት አጠቃቀም ወይም ጥንቃቄ በሌለው የግብረ ሥጋ ግንኙነት)"\
+                                    "ከፍተኛ የሄፐታይተስ በሽታ ወዳለባቸው አካባቢዎች መጓዝ እና ከ1990ዎቹ በፊት የተወሰኑ የሕክምና ሂደቶችን ለምሳሌ ደም መውሰድን ያጠቃልላል።\n\n"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                            
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "#መከላከያ_መንገዶች:-"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                            
+                            MDLabel:
+                                text:
+                                    "\n"\
+                                    "ለቫይረስ ሄፓታይተስ የመከላከያ እርምጃዎች ከሄፐታይተስ ኤ እና ቢ መከተብ ፣ ጥሩ የንፅህና አጠባበቅ ልምዶችን ማለትም እጅን አዘውትረው መታጠብ፣ መርፌዎችን ወይም የግል እንክብካቤ ቁሳቁሶችን ፣"\
+                                    "እንደ ምላጭ ወይም የጥርስ ብሩሾችን ከመጋራት መቆጠብ እና በግብረ ሥጋ ግንኙነት ወቅት ኮንዶም መጠቀምን ያጠቃልላል።"
+                                    
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                                
+
+
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "#ሕክምናው"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"
+                            
+                            
+                            MDLabel:
+                                text:
+                                    "\n"\
+                                    "የቫይረስ ሄፓታይተስ ሕክምና በቫይረሱ ​​​​አይነት እና በኢንፌክሽኑ ክብደት ላይ የተመሰረተ ነው። ሕክምናው እንደ ኢንተርፌሮን ወይም ለሄፐታይተስ ሲ በቀጥታ የሚሠሩ ፀረ ቫይረስ"\
+                                    "መድኃኒቶችን ሊያካትት ይችላል። በአንዳንድ ሁኔታዎች እንደ ጉበት ውድቀት ያሉ ችግሮችን ለመቆጣጠር ሆስፒታል መተኛት አስፈላጊ ሊሆን ይችላል።"\
+                                    "ሥር በሰደደ ሁኔታ ውስጥ፣ እንደ አልኮል አለመጠጣት እና ጤናማ ክብደትን መጠበቅ ያሉ የአኗኗር ዘይቤ ለውጦች ምልክቶችን ለመቆጣጠር እና የበሽታውን እድገት ለመቀነስ ይረዳ።"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+
+
+
+                            
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "#ሄፓታይተስ ቢ እና ሲ"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"
+                            
+                            
+                            MDLabel:
+                                text:
+                                    "የቫይራል ሄፓታይተስ አይነቶች ሲሆኑ ከተበከለ ደም ወይም የሰውነት ፈሳሽ ጋር በመገናኘት የሚተላለፉ ናቸው። የሄፐታይተስ ቢ እና ሲ በሽታ አምጪ ተህዋሲያን ቫይረሶችን በጉበት ሴሎች ላይ በመበከል ወደ እብጠት እና በጉበት ቲሹ ላይ ጉዳት ያደርሳሉ። እነዚህ ኢንፌክሽኖች ሥር የሰደደ እና የጉበት ካንሰር እና የጉበት ውድቀት አደጋን ይጨምራሉ።\n\n"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                            
+
+
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "#ምልክቶች:-"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+
+                            MDLabel:
+                                text:
+                                    "\n"\
+                                    "የሄፐታይተስ ቢ እና ሲ ምልክቶች በአጠቃላይ ከቫይረስ ሄፓታይተስ ጋር ተመሳሳይ ናቸው። የተለመዱ ምልክቶች ድካም, ማቅለሽለሽ, የምግብ ፍላጎት ማጣት, የጃንዲስ እና የሆድ ህመም ናቸው።"\ 
+                                    "በአንዳንድ ሁኔታዎች ሥር የሰደደ የሄፐታይተስ ቢ እና ሲ ያለባቸው ሰዎች ለብዙ አመታት ምንም ምልክት ላይታዩ ይችላሉ።\n\n"                                    
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "#አጋላጭ_ሁኔታዎች:-"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                            
+                            MDLabel:
+                                text:
+                                    "\n"\
+                                    "ለሄፐታይተስ ቢ እና ሲ ከሚያጋልጡ ምክንያቶች መካከል ለተበከለ ደም ወይም የሰውነት ፈሳሾች መጋለጥ ፣ መርፌ መድሐኒት መጠቀም ፣ ጥንቃቄ የጎደለው የግብረ ሥጋ ግንኙነት እና ከፍተኛ የሄፐታይተስ በሽታ ወዳለባቸው አካባቢዎች መሄድን ያጠቃልላል።"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                            
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "#መከላከያ_መንገዶች:-"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                            
+                            MDLabel:
+                                text:
+                                    "\n"\
+                                    "ለሄፐታይተስ ቢ እና ሲ የመከላከያ እርምጃዎች በአጠቃላይ ከቫይረስ ሄፓታይተስ ጋር ተመሳሳይ ናቸው።መከተብ, ጥሩ የንጽህና ልምዶችን መለማመድ እና መርፌዎችን ወይም የግል እንክብካቤ እቃዎችን ከመጋራት መቆጠብ አስፈላጊ ነው።"
+                                    
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                            
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "ሕክምናው:-"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                            
+                            MDLabel:
+                                text:
+                                    "\n"\
+                                    "የሄፐታይተስ ቢ እና ሲ ሕክምና የፀረ-ቫይረስ መድሃኒቶችን ያካትታል. በአንዳንድ ሁኔታዎች እንደ የጉበት ስራ ማቆም ያሉ ችግሮችን ለመቆጣጠር የጉበት መተካት አስፈላጊ ሊሆን ይችላል። እንደ ኢንፌክሽኑ ክብደት ላይ በመመርኮዝ የግለሰብ ሕክምና ዕቅድ ለማዘጋጀት ከጤና እንክብካቤ አቅራቢ ጋር አብሮ መሥራት አስፈላጊ ነው።\n\n"
+                                    
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"

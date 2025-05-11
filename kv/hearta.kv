@@ -1,0 +1,154 @@
+<HeartaScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('heart')
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/cad.jpg"
+                                                       
+                                
+                                MDLabel:
+                                    text: "\n\nየኮሮናሪ የደም ቧንቧ በሽታ(CAD)"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                                    halign: "center"  
+
+                                    
+                            MDLabel:
+                                text: "የደም ቧንቧ ህመም (Cad) የሚከሰተው ደም ፣ ኦክሲጅን እና አልሚ ምግቦችን ለልብ የሚያቀርቡት የደም ቅዳ ቧንቧዎች ሲጠበቡ ወይም በፕላክ ክምችት (አተሮስክለሮሲስ) ምክንያት ሲዘጉ ነው። ይህም የልብ የደም ዝውውርን ይቀንሳል የልብ ድካም አደጋን ይጨምራል።\n\n"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13dp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                                padding: "11dp"
+                            
+                            
+                            MDCard:
+                                adaptive_height: True
+                                padding: "8dp"
+                                MDLabel:
+                                    text: "ምልክቶች"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"
+                                    halign: "center"
+                                    halign: "justify"
+                            
+                            MDLabel:
+                                text:
+                                    "\n"\ 
+                                    "የደረት ሕመምና የትንፋሽ እጥረት።\n\n"\
+                                    "ድካምና ማቅለሽለሽ።\n\n"\
+                                    "መፍዘዝ ወይም ራስ ምታት።\n\n"\
+                                    "በክንድ ፣ አንገት ፣ መንጋጋ ወይም ጀርባ ላይ ህመም።\n\n"                                    
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "15sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                            
+
+                            MDCard:
+                                adaptive_height: True
+                                padding: "8dp"
+                                
+                                MDLabel:
+                                    text: "መንስኤዎችና አገላጭ ሁኔታዎች"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"
+                                    halign: "center"
+                                    halign: "justify"
+                            
+                            MDLabel:
+                                text:
+                                    "\n"\ 
+                                    "ከፍተኛ ኮሌስትሮል እና ከፍተኛ የደም ግፊት።\n\n"\
+                                    "ማጨስ እና የስኳር በሽታ።\n\n"\
+                                    "ከመጠን ያለፈ ውፍረት።\n\n"\
+                                    "የአካል ብቃት እንቅስቃሴ እጥረት።\n\n"\
+                                    "ጤናማ ያልሆነ አመጋገብ (በስብ እና በስኳር የበለፀገ)።\n\n"\
+                                    "የልብ ሕመም የቤተሰብ ታሪክ።\n\n"\
+                                    "ውጥረት እና ከመጠን በላይ አልኮል መጠጣት።\n\n"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                            
+
+                            MDCard:
+                                adaptive_height: True
+                                padding: "8dp"
+                                
+                                MDLabel:
+                                    text: "መከላከል"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"
+                                    halign: "center"
+                                    halign: "justify"
+                            
+                            MDLabel:
+                                text:
+                                    "\n"\ 
+                                    "አዘውትሮ የአካል ብቃት እንቅስቃሴ ያድርጉ።\n\n"\
+                                    "ጤናማ ክብደት ይኑሮት።\n\n"\
+                                    "የጭንቀት ደረጃዎችን መቆጣጠር።\n\n"\
+                                    "የደም ግፊትን እና ኮሌስትሮልን ይቆጣጠሩ።\n\n"\
+                                    "ማጨስ እና ከመጠን በላይ አልኮልን መጠጣት ያስወግዱ።\n\n"\
+                                    "ጤናማ አመጋገብ ዝቅተኛ ስብ ፣ ከፍተኛ ፋይበር ፣ ፍራፍሬ ፣ አትክልት ይመገቡ።\n\n"\
+                                    "መደበኛ የህክምና ምርመራ ያድርጉ።\n\n"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"

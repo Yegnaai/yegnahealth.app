@@ -1,0 +1,234 @@
+<StomachScreen>:
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    
+                    MDBoxLayout:
+                        color: 1, 1, 1, 1  # Cool white color
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+                        adaptive_height: True                        
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('main') 
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+                    MDBoxLayout:
+                        orientation: "vertical"
+                        pos_hint: {"center_y": .5}
+                        ScrollView:
+                            MDGridLayout:
+                                cols: 2
+                                padding: "28dp"
+                                spacing: "20dp"
+                                adaptive_height: True
+                                size_hint_y: None
+                                height: self.minimum_height
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('stomacha')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/anjk.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የአንጀት ቁስለት")
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "18dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('stomachb')
+                                    orientation: "vertical"
+                                    elevation: 4
+
+                                    FitImage:
+                                        source: "assets/images/yechku.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የጮጋራ ቁስለት")
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('stomachc')
+                                    orientation: "vertical"
+                                    elevation: 4
+
+                                    FitImage:
+                                        source: "assets/images/hepa.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የሄፓታይተስ በሽታ")
+                                        bold: True
+                                        font_size: "17dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('stomachd')
+                                    orientation: "vertical"
+                                    elevation: 4
+
+                                    FitImage:
+                                        source: "assets/images/hamtete.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የአሞት ጠጠረ")
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('stomache')
+                                    orientation: "vertical"
+                                    elevation: 4
+
+                                    FitImage:
+                                        source: "assets/images/gubetca.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የጉበት ካንሰር")
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('stomachf')
+                                    orientation: "vertical"
+                                    elevation: 4
+
+                                    FitImage:
+                                        source: "assets/images/alcohepa.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የአልኮል ሄፓታይተስ")
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('stomachg')
+                                    orientation: "vertical"
+                                    elevation: 4
+
+                                    FitImage:
+                                        source: "assets/images/kintarot.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("ኪንታሮት")
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('stomachh')
+                                    orientation: "vertical"
+                                    elevation: 4
+
+                                    FitImage:
+                                        source: "assets/images/yetcancer.jpg"
+                                        size_hint_y: None
+                                        height: "100dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የትልቁ አንጀት ካንሰር")
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+
+                                
+                                

@@ -1,0 +1,325 @@
+<RespaScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    
+                    MDBoxLayout:
+                        color: 1, 1, 1, 1  # Cool white color
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+                        adaptive_height: True
+                        
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('main')
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    MDBoxLayout:
+                        orientation: "vertical"
+                        pos_hint: {"center_y": .5}
+                        ScrollView:
+                            MDGridLayout:
+                                cols: 2
+                                padding: "28dp"
+                                spacing: "20dp"
+                                adaptive_height: True
+                                size_hint_y: None
+                                height: self.minimum_height
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('respaa')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+
+                                    FitImage:
+                                        source: "assets/images/ymc.jpg"
+                                        size_hint_y: None
+                                        height: "120dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text: "የማህፀን ካንሰር"
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('respab')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+
+                                    FitImage:
+                                        source: "assets/images/yme.jpg"
+                                        size_hint_y: None
+                                        height: "120dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የማህፀን እጢ")
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('respac')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+
+                                    FitImage:
+                                        source: "assets/images/ymb.jpg"
+                                        size_hint_y: None
+                                        height: "120dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የማህፀን በር ካንሰር")
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    #on_release: app.switch_to_screen('respad')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+
+                                    FitImage:
+                                        source: "assets/images/pos.jpg"
+                                        size_hint_y: None
+                                        height: "120dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("Polycystic(PCOS)")
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('respae')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+
+                                    FitImage:
+                                        source: "assets/images/bacc.jpg"
+                                        size_hint_y: None
+                                        height: "120dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("ባክቴሪያል ቫጋኖሲስ")
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('respaf')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+
+                                    FitImage:
+                                        source: "assets/images/spg.jpg"
+                                        size_hint_y: None
+                                        height: "120dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("ሳልፒንጊትስ")
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('respah')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+
+                                    FitImage:
+                                        source: "assets/images/vac.jpg"
+                                        size_hint_y: None
+                                        height: "120dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("ቫሪኮሴል")
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('respai')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+
+                                    FitImage:
+                                        source: "assets/images/ctm.jpg"
+                                        size_hint_y: None
+                                        height: "120dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("ያልወርድ የወንድ የዘር ፍሬ")
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('respaj')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+                                    FitImage:
+                                        source: "assets/images/phb.jpg"
+                                        size_hint_y: None
+                                        height: "120dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የተስፋፋ ፕሮስቴት")
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('respak')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+
+                                    FitImage:
+                                        source: "assets/images/bra.jpg"
+                                        size_hint_y: None
+                                        height: "120dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የጡት ካንሰር")
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+
+                                MDCard:
+                                    size_hint: 0.45, None
+                                    height: "120dp"
+                                    radius: [12, 12, 12, 12]
+                                    on_release: app.switch_to_screen('respal')
+                                    orientation: "vertical"
+                                    elevation: 4
+                                    adaptive_height: True
+
+
+                                    FitImage:
+                                        source: "assets/images/bi.jpg"
+                                        size_hint_y: None
+                                        height: "120dp"
+                                        radius: [12, 12, 0, 0]
+
+                                    MDLabel:
+                                        text:("የጡት ኢንፌክሽን")
+                                        bold: True
+                                        font_size: "16dp"
+                                        theme_text_color: "Secondary"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        halign: "center"
+                                        valign: "center"
+                                        adaptive_height: True
+                                
+                               

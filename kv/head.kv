@@ -1,0 +1,114 @@
+<HeadScreen>:
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    spacing: '10dp'
+                    padding: '10dp'
+
+                    # Top Bar
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '10dp'
+                        spacing: '10dp'
+                        md_bg_color: rgba(255, 255, 255, 0.8)  # Semi-transparent white
+                        radius: [12, 12, 0, 0]
+
+                        MDIconButton:
+                            icon: "arrow-left"
+                            theme_text_color: "Secondary"
+                            on_release: app.switch_to_screen('main')
+
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    # Scrollable Content
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: '20dp'
+                            spacing: '20dp'
+                            adaptive_height: True
+                            size_hint_y: None
+                            height: self.minimum_height
+
+                            # Ear Pain Card
+                            MDCard:
+                                size_hint: 0.45, None
+                                height: "160dp"
+                                radius: [12, 12, 12, 12]
+                                orientation: "vertical"
+                                elevation: 4
+                                ripple_behavior: True
+                                on_release: app.switch_to_screen('heada')
+
+                                FitImage:
+                                    source: "assets/images/ear.jpg"
+                                    size_hint_y: None
+                                    height: "120dp"
+                                    radius: [12, 12, 0, 0]
+
+                                MDLabel:
+                                    text: "የጆሮ ህመም"
+                                    bold: True
+                                    font_size: "18sp"
+                                    theme_text_color: "Secondary"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    halign: "center"
+                                    valign: "center"
+                                    padding: '10dp'
+
+                            # Nose Pain Card
+                            MDCard:
+                                size_hint: 0.45, None
+                                height: "160dp"
+                                radius: [12, 12, 12, 12]
+                                orientation: "vertical"
+                                elevation: 4
+                                ripple_behavior: True
+                                on_release: app.switch_to_screen('headb')
+
+                                FitImage:
+                                    source: "assets/images/nose.jpg"
+                                    size_hint_y: None
+                                    height: "120dp"
+                                    radius: [12, 12, 0, 0]
+
+                                MDLabel:
+                                    text: "የአፍንጫ ህመም"
+                                    bold: True
+                                    font_size: "18sp"
+                                    theme_text_color: "Secondary"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    halign: "center"
+                                    valign: "center"
+                                    padding: '10dp'
+
+                            # Throat Pain Card
+                            MDCard:
+                                size_hint: 0.45, None
+                                height: "160dp"
+                                radius: [12, 12, 12, 12]
+                                orientation: "vertical"
+                                elevation: 4
+                                ripple_behavior: True
+                                on_release: app.switch_to_screen('headc')
+
+                                FitImage:
+                                    source: "assets/images/nake.jpg"
+                                    size_hint_y: None
+                                    height: "120dp"
+                                    radius: [12, 12, 0, 0]
+
+                                MDLabel:
+                                    text: "የጉሮሮ ህመም"
+                                    bold: True
+                                    font_size: "18sp"
+                                    theme_text_color: "Secondary"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    halign: "center"
+                                    valign: "center"
+                                    padding: '10dp'

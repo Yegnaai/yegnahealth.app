@@ -1,0 +1,384 @@
+<FoodeScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+                    
+                    # Header Section
+                    MDBoxLayout:
+                        adaptive_height: True
+                        #padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDLabel:
+                            text: "ቫይታሚኖች"
+                            font_name: "assets/fonts/Yeshuah.ttf"
+                            theme_text_color: "Secondary"
+                            font_size: "19sp"
+                            halign: 'center'
+                            pos_hint: {"center_x": .5}
+                            bold: True
+                            adaptive_height: True
+                        
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('food')
+
+                    # Scrollable Content Section
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+                            
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.5  # Use size_hint for better responsiveness
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+                                
+                                Image:
+                                    source: "assets/food/foods.jpg"
+                                    size_hint: None, None
+                                    size: "150dp", "150dp"
+                                    fit_mode: "contain"  # Replaces allow_stretch/keep_ratio
+                                    pos_hint: {"center_x": 0.5}
+
+                                
+                                MDLabel:
+                                    text: "ቫይታሚኖች ምንድን ናቸው?"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "20sp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ቫይታሚኖች ለተለያዩ የሰውነት ተግባራት አስፈላጊ የሆኑ ኦርጋኒክ ውህዶች ናቸው:-"\
+                                        "እነሱ ሜታቦሊዝምን ፣ የበሽታ መከላከልን ፣ እድገትን እና ጥገናን ይደግፋሉ።የሰው አካል ብዙ ቪታሚኖችን በበቂ መጠን ማምረት ስለማይችል በአመጋገብ ወይም ተጨማሪ ምግብ ማግኘት አለባቸው።\n\n"
+                                    font_size: "14sp"
+                                    halign: 'center'
+                                    theme_text_color: "Hint"
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text:
+                                            "የቪታሚኖች ዓይነቶች?"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "16sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+
+                                    
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ቫይታሚኖች በሟሟቸው ላይ በመመስረት በሁለት ዋና ዋና ዓይነቶች ይከፈላሉ-\n\n"\
+                                        "1.በስብ የሚሟሟ ቫይታሚኖች፡ በሰውነት ስብ እና በጉበት ውስጥ ይከማቻሉ፡-\n\n"\
+                                        "ቫይታሚን ኤ (A): ተግባረ የቆዳ ጤና እና የበሽታ መከላከያ ተግባራት።\n\n"\
+                                        "ቫይታሚን ዲ (D): ተግባረ የአጥንት ጤና, የካልሲየም መሳብ እና የመከላከያ ድጋፍ።\n\n"\
+                                        "ቫይታሚን ኢ (E): ተግባረ ሴሎችን ከጉዳት የሚከላከል አንቲኦክሲዳንት።\n\n"\
+                                        "ቫይታሚን ኬ (K): ተግባረ የደም መርጋት እና የአጥንት ጤና።\n\n"\
+                                        "2.በውሃ ውስጥ የሚሟሟ ቫይታሚኖች: በሰውነት ውስጥ አይከማቹም በሽንት ይወጣል-\n\n"\
+                                        "ቫይታሚን ሲ (C): የበሽታ መከላከያ ተግባራት, collagen synthesis እና antioxidant\n\n"\
+                                        "ቢ (B) ቪታሚኖች፡- የኢነርጂ ምርት፣ የቀይ የደም ሴሎች መፈጠር እና የአንጎል ተግባር። B1 (thiamine), B2 (riboflavin), B3 (niacin), B5 (pantothenic acid), B6, B7 (biotin), B9 (folate), and B12\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text:
+                                            "ቫይታሚን ኤ"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "16sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ቫይታሚን ኤ በስብ የሚሟሟ ቫይታሚን ለተለያዩ የሰውነት ተግባራት ማለትም ፣ በሽታ መከላከል ጤናን፣ የመራባት እና cellular  ግንኙነትን ጨምሮ። ቫይታሚን ኤ በሁለት መልኩ ይገኛሉ፥\n\n"\
+                                        "ቀድሞ የተሻሻለ ቫይታሚን ኤ (A) (ሬቲኖል እና ሬቲኒል ኢስተር) በእንስሳት ላይ በተመሰረቱ እንደ ጉበት፣ እንቁላል እና የወተት ተዋጽኦዎች ውስጥ ይገኛሉ።\n\n"\
+                                        "ፕሮቪታሚን ኤ (A) ካሮቲኖይድ  (እንደ ቤታ ካሮቲን) እንደ ካሮት፣ ስኳር ድንች እና ስፒናች ባሉ ከዕፅዋት የተቀመሙ ምግቦች ውስጥ ይገኛሉ።\n\n"                                 
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text:
+                                            "ቁልፍ ተግባራት እና ጥቅሞች፡-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "15sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ራዕይ ፡ ጥሩ የአይን እይታን ለመጠበቅ እና የሌሊት(በምሽት ማየት)  ዓይነ ስውርነትን ለመከላከል አስፈላጊ ነው።\n\n"\
+                                        "የበሽታ መከላከል ስርዓት ፡ በሽታ የመከላከል አቅምን ያጠናክራል እንዲሁም ለበሽታ ተጋላጭነትን ይቀንሳል።\n\n"\
+                                        "የህዋስ እድገት ፡ የቆዳ ጤንነትን፣ ሴሉላር ጥገናን እና የ mucosal ንፅህናን ይደግፋል።\n\n"\
+                                        "የፅንስ እድገት ፡ ለፅንሱ እድገት እና የአካል ክፍሎች መፈጠር ወሳኝ።\n\n"\
+                                        "አንቲኦክሲዳንት ሚና ፡ ካሮቲኖይድስ እንደ አንቲኦክሲደንትስ ሆነው ያገለግላሉ ፣ ይህም የካንሰርን ስጋቶች ሊቀንስ ይችላል።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text:
+                                            "እጥረት፡-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "15sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "የቫይታሚን ኤ እጥረት የሚከተሉትን ሊያስከትል ይችላል:-\n\n"\
+                                        "የምሽት ዓይነ ስውርነት በማታ ማየት አለመቻል።\n\n"\
+                                        "የደረቁ አይኖች (xerophthalmia) እና ለዓይነ ስውርነት የመጋለጥ እድልን ይጨምራል።\n\n"\
+                                        "ለበሽታዎች ተጋላጭነት መጨመር።\n\n"\
+                                        "የቆዳ እና የፀጉር ችግሮች።\n\n"\
+                                        "ከመጠን በላይ ቫይታሚን ኤ (A):-\n\n"\
+                                        "ለጤና በጣም አስፈላጊ ቢሆንም, ከመጠን በላይ መውሰድ ወደ መርዝነት ሊመራ ይችላል, ይህም ማቅለሽለሽ, ማዞር, እና ከባድ በሆኑ ጉዳዮች ላይ, የጉበት ጉዳት ያስከትላል. የሚመከረው ዕለታዊ መጠን ለወንዶች 900 mcg እና ለሴቶች 700 mcg ነው።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text:
+                                            "ቫይታሚን ዲ (D):-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "15sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ቫይታሚን ዲ ለአጥንት ጤና ፣ የበሽታ መከላከያ ተግባራት እና አጠቃላይ ለደህንነት ወሳኝ ነው።\n\n"\
+                                        "ሰውነት ጠንካራ አጥንትን ለመጠበቅ አስፈላጊ የሆኑትን ካልሲየም እና ፎስፎረስ እንዲወስድ ይረዳል።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text:
+                                            "ምንጮች:-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "15sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "የፀሀይ ብርሀን ፡ ቀዳሚ ምንጭ፣ UV ጨረሮች በቆዳ ውስጥ የቫይታሚን ዲ ውህደትን ስለሚቀሰቅሱ።\n\n"\
+                                        "የአመጋገብ ምንጮች ፡ ዓሳ (ሳልሞን፣ ማኬሬል) ፣ የእንቁላል አስኳሎች ፣ ቀይ ሥጋ ፣ (እንደ ጥራጥሬ፣ ወተት፣ እና የብርቱካን ጭማቂ) እና እንጉዳዮችን ያካትቱ።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text:
+                                            "እጥረት:-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "15sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "የቫይታሚን ዲ እጥረት የሚከተሉትን ችግሮች ሊያስከትል ይችላል:-\n\n"\
+                                        "(Rickets)ሪኬትስ  በልጆች ላይ (ለስላሳ ፣ ደካማ አጥንቶች)።\n\n"\
+                                        "(Osteomalacia ) በአዋቂዎች (የአጥንት ህመም እና ድክመት)።\n\n"\
+                                        "(Osteoporosis) ኦስቲዮፖሮሲስ (የሚሰባበር አጥንቶች) ለረጅም ጊዜ።"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text:
+                                            "ቫይታሚን ኢ (E):-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "15sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ቫይታሚን ኢ (E) ሴሎችን ከኦክሳይድ ጉዳት ለመጠበቅ፣ የቆዳ ጤንነትን ለመጠበቅ ፣ በሽታ የመከላከል አቅምን ለማጠናከር እና ራዕይን እና ሌሎች የፊዚዮሎጂ ሂደቶችን ለመደገፍ አስፈላጊ የሆነ ስብ የሚሟሟ አንቲኦክሲዳንት ነው።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"  
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text:
+                                            "የጤና ጥቅሞች:-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "15sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "አንቲኦክሲዳንት ባሕሪያት ፡ ነፃ radicals ገለልተኝነቶችን ይረዳል ፣ የኦክሳይድ ጭንቀትን እና እብጠትን ይቀንሳል።\n\n"\
+                                        "የቆዳ ጤንነት ፡ የቆዳ እርጥበትን ይደግፋል፣ እብጠትን ይቀንሳል ፣ እና ከአካባቢ ጉዳት ሊከላከል ይችላል።\n\n"\
+                                        "የልብ ጤና ፡ LDL (መጥፎ ኮሌስትሮልን) በመቀነስ የልብና የደም ሥር (cardiovascular) በሽታዎችን የሚያጋልጡ ሁኔታዎችን ለመቀነስ ይረዳል።\n\n"\
+                                        "ኒውሮሎጂካል ተግባር ፡ የእውቀት ማሽቆልቆልን ለመከላከል እና የአዕምሮ ጤናን ለመደገፍ ይረዳል።\n\n"\
+                                        "የበሽታ መከላከል ድጋፍ ፡ በሽታ የመከላከል አቅምን ያዳብራል፣በተለይ በአረጋውያን ወይም ጉድለት ያለባቸው ሰዎች።\n\n"\
+                                        "የሳንባ ጤና ፡- በአንዳንድ ሁኔታዎች እንደ አስም ያሉ የመተንፈሻ አካላት ሁኔታን ያሻሽላል።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"  
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text:
+                                            "የቫይታሚን ኢ (E) ምንጮች :-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "15sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "የእፅዋት ዘይቶች ፡ የሱፍ አበባ እና የስንዴ ዘር ዘይት።\n\n"\
+                                        "ለውዝ እና ዘር ፡ ለውዝ ፣ የሱፍ አበባ ዘሮች ፣ እና hazelnuts።\n\n"\
+                                        "አረንጓዴ ቅጠላማ አትክልቶች : ስፒናች እና ብሮኮሊ።\n\n"\
+                                        "ፍራፍሬዎች : አቮካዶ እና ኪዊ።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"     
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text:
+                                            "የጉድለት ምልክቶች:-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "15sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "የጡንቻ ድክመት።\n\n"\
+                                        "የተዳከመ እይታ እና ቅንጅት።\n\n"\
+                                        "ድካማ በሽታ የመከላከያ ተግባር።\n\n"\
+                                        "ሬቲኖፓቲ (በሬቲና ላይ የሚደርስ ጉዳት)።\n\n"\
+                                        "ደረቅ : የተጎዳ ቆዳ።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary" 
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text:
+                                            "ቫይታሚን ኬ (K):-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "15sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ቫይታሚን ኬ (K) በስብ የሚሟሟ ቫይታሚን ለደም መርጋት፣ ለአጥንት ጤንነት እና ከመጠን በላይ የደም መፍሰስን ለመከላከል አስፈላጊ ነው።\n\n"\
+                                        "ለእነዚህ ሂደቶች የሚያስፈልጉትን ፕሮቲኖች በማንቃት ወሳኝ ሚና ይጫወታል ሁለት ዋና ዋና የቫይታሚን ኬ (K) ዓይነቶች አሉ።\n\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"  
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text:
+                                            "በቅርብ ቀን በተሻለ አገልግሎት ይጠብቁን።"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "15sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf" 
+                                          
+
+                                
+    

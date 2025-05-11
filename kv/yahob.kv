@@ -1,0 +1,169 @@
+<YahobScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                BoxLayout:
+                    orientation: 'vertical'
+                    adaptive_height: True
+
+                    MDBoxLayout:
+                        orientation: 'horizontal'
+                        adaptive_height: True
+                        padding: "2dp", 0, "2dp", 0
+                        pos_hint: {"center_y": .92}
+                        adaptive_height: True
+
+                        MDCard:
+                            size_hint: 0.9, None  
+                            height: "220dp"
+                            orientation: "vertical"
+                            elevation: 4
+                            FitImage:
+                                source: "assets/images/ye.jpg"
+                                size_hint_y: None
+                                height: "280dp"
+                                radius: [12, 12, 0, 0]
+                    MDIconButton:
+                        icon: "close"
+                        md_bg_color: 1, 1, 1, .6
+                        x: 12
+                        pos_hint: {"top": .99}
+                        on_release: app.switch_to_screen('yaho')
+
+                    ScrollView:
+                        MDList:
+                            padding: [10, 0, 20, 0]
+
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text:("#ኤች አይ ቪ")
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"
+
+
+                            MDLabel:
+                                text:
+                                    "ኤች አይ ቪ በሽታ የመከላከል ስርዓትን በተለይም ሲዲ4 ሴሎችን የሚያጠቃ ቫይረስ  ሲሆን ይህም በሽታን የመከላከል አቅምን የሚያዳክም እና ግለሰቦችን ለኦፖርቹኒስቲክ ኢንፌክሽን እንዲጋለጥ ያደርጋል።"\
+                                    "ኤድስ (acquired immunodeficiency syndrome) የኤችአይቪ ኢንፌክሽን የመጨረሻ ደረጃ ሲሆን በሽታ የመከላከል ስርዓቱ ከፍተኛ ጉዳት የደረሰበት እና ግለሰቦች ለሕይወት አስጊ የሆኑ ኢንፌክሽኖች ሊፈጠሩ ይችላሉ።\n\n"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                            
+
+
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "#ምልክቶች:-"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+
+                            MDLabel:
+                                text:
+                                    "\n"\
+                                    "የኤችአይቪ ኢንፌክሽን የመጀመሪያ ደረጃዎች ምንም ምልክት ላይኖራቸው ይችላል፣ ነገር ግን ቫይረሱ እየገፋ ሲሄድ ግለሰቦች ትኩሳት ፣ ድካም ፣ እብጠት ሊምፍ ኖዶች እና ሽፍታ ሊሰማቸው ይችላል:-"\ 
+                                    "በኋለኞቹ ደረጃዎች, ግለሰቦች እንደ የሳንባ ምች ወይም ሳንባ ነቀርሳ, እንዲሁም አንዳንድ ነቀርሳዎች ያሉ ኦፖርቹኒስቲክ ኢንፌክሽኖች ሊፈጠሩ ይችላሉ።\n\n"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "#አጋላጭ_ሁኔታዎች:-"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                            
+                            MDLabel:
+                                text:
+                                    "\n"\
+                                    "ለኤችአይቪ ከሚያጋለጡት ዋና ዋና ምክንያቶች መካከል ጥንቃቄ የጎደለው የግብረ ሥጋ ግንኙነት፣ በበሽታው ከተያዘ ሰው ጋር መርፌ ወይም መርፌን መጋራት እና ከእናት ወደ ልጅ በእርግዝና፣"\
+                                    "በወሊድ ወይም በጡት ማጥባት ወቅት መተላለፍን ያጠቃልላል።\n\n"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                            
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "#መከላከያ_መንገዶች:-"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp"
+                            
+                            MDLabel:
+                                text:
+                                    "\n"\
+                                    "የኤችአይቪ ስርጭትን ለመከላከል በርካታ መንገዶች አሉ፣ እነዚህም ኮንዶም በመጠቀም ደህንነቱ የተጠበቀ የግብረ ሥጋ ግንኙነት ማድረግ፣ መርፌዎችን ወይም ስለታማ ነገሮችን  ከመጋራት መቆጠብ፣"\
+                                    "ለኤችአይቪ በመደበኛነት መመርመር እና ለኤችአይቪ ኢንፌክሽን ተጋላጭ ለሆኑ ሰዎች ቅድመ ተጋላጭነት ፕሮፊላክሲስ (PrEP) መጠቀምን ጨምሮ።"\
+                                    "የኤችአይቪ ቅድመ ምርመራ እና ህክምና የቫይረሱን ስርጭት ወደሌሎች ለመከላከል ይረዳል።\n\n"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                                
+
+
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "#ሕክምናው"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"
+                            
+                            
+                            MDLabel:
+                                text:
+                                    "\n"\
+                                    "በአሁኑ ጊዜ ለኤችአይቪ ምንም ዓይነት መድኃኒት የለም ፣ ነገር ግን የፀረ ኤችአይቪ ሕክምና (ART) ቫይረሱን ለመግታት ፣ የበሽታዎችን እድገት ለመከላከል እና የመተላለፍን አደጋ ለመቀነስ ይረዳል።"\
+                                    "አርት (ART) የፀረ ኤችአይቪ መድሐኒቶችን በተለይም ለህይወት የሚያጠቃልለውን ድብልቅ መውሰድን ያካትታል። ቫይረሱን ለመቆጣጠር እና የመድሃኒት የጎንዮሽ ጉዳቶችን ቫይረሱን ለመቆጣጠር እና:-"\
+                                    "የመድሃኒት የጎንዮሽ ጉዳቶችን ለመቆጣጠር ARTን እንደታዘዘው መውሰድ እና መደበኛ የህክምና ቀጠሮዎችን መከታተል አስፈላጊ ነው። በተጨማሪም በኤች አይ ቪ የተያዙ ግለሰቦች ጤናማ አመጋገብን በመጠበቅ፣"\
+                                    "አዘውትረው የአካል ብቃት እንቅስቃሴ ማድረግ ማጨስንና አልኮልን ከመጠን በላይ መጠጣትን በማቆም ራስን የመንከባከብ ተግባር ማከናወን አለባቸው።\n\n"
+                                font_name: "assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                            
+                            MDCard:
+                                adaptive_height: True
+                                padding: "11dp"
+
+                                MDLabel:
+                                    text: "#መድሃኒት ማክበር"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"
+                            
+                            
+                            MDLabel:
+                                text:
+                                    "\n\n"
+                                font_name:"assets/fonts/Abyssinica.ttf"
+                                font_size: "13sp"
+                                adaptive_height: True
+                                theme_text_color: "Secondary"
+                                adding: "20dp", 0, "20dp", 0

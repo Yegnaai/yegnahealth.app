@@ -1,0 +1,201 @@
+<SkindScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    # Header Section
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('skin')
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    # Scrollable Content Section
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/shefta.jpg"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "#የቆዳ ሽፍታ"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"
+
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "የሚያመለክተው የተበሳጨ ወይም ያበጠ ቆዳ ሲሆን ይህም ቀይ፣ ማሳከክ እና የማይመች ሊሆን ይችላል። በልጆች ላይ ሽፍታዎች የተለመዱ እና በተለያዩ ምክንያቶች ሊከሰቱ ይችላሉ, ይህም ኢንፌክሽኖች, አለርጂዎች, ብስጭት ወይም የጤና ሁኔታዎችን ጨምሮ ነው።\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#ምልክቶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                    
+                                        
+
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "መቅላት፥"\
+                                        "እንደ ሽፍታው መንስኤ ላይ በመመስረት ቆዳው ከወትሮው የተለየ ቀይ፣ሮዝ ወይም ጨለማ ሊመስል ይችላል።\n\n"\
+                                        "ማሳከክ፥"\
+                                        "አብዛኛው ሽፍቶች ቆዳን ስለሚያሳክሙ ምቾት አይሰማቸውም።\n\n"\
+                                        "ማበጥ፥"\
+                                        "የተጎዳው አካባቢ ሊነሳ ወይም ሊያብጥ ይችላል።\n\n"\
+                                        "ማቅለሽለሽ ወይም ማስታወክ፥"\
+                                        "በአንዳንድ ሁኔታዎች ሽፍታው ፈሳሽ የሚያፈስ አረፋዎችን ሊያስከትል ይችላል።\n\n"\
+                                        "ደረቅ ወይም የተዳከመ ቆዳ፥"\
+                                        "አንዳንድ ሽፍታዎች ወደ ደረቅና የተበጣጠሱ የቆዳ  ይሆናሉ።\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#አጋላጭ ምክንያቶች፥"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                    
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "አለርጂዎች:"\
+                                        "ለምግብ፣ ለመድሃኒት ወይም እንደ ሳሙና፣ ላረጎ  ባሉ ንጥረ ነገሮች የምፋጠር አለርጂ እንደ ቀፎ ወይም ኤክማኤ ያሉ ሽፍታዎችን ሊያስከትል ይችላል።\n\n"\
+                                        "ኢንፌክሽኖች:"\
+                                        "እንደ (chickenpox) ኩፍኝ  ወይም የእጅ፣ የእግር እና የአፍ በሽታ ያሉ የቫይረስ ኢንፌክሽኖች ብዙ ጊዜ ሽፍታዎች ይከሰታሉ።"\
+                                        "በባክቴሪያ የሚመጡ ኢንፌክሽኖች፣ ልክ እንደ ኢምፔቲጎ፣ መግል ወይም ቅርፊት የያዙ ሽፍታዎችን ሊያስከትሉ ይችላሉ።\n\n"\
+                                        "የሙቀት ሽፍታ (Prickly Heat):"\
+                                        "በተቆለፈ የላብ እጢዎች የሚከሰት፣ ወደ ቆዳ ላይ ወደ ትናንሽ እብጠቶች ወይም አረፋዎች ያመራል፣ ብዙ ጊዜ በሞቃትና እርጥበት አዘል የአየር ጠባይ ይታያል።\n\n"\
+                                        "የሚያበሳጭ የቆዳ በሽታ:"\
+                                        "ከሚያስቆጣ ነገር ጋር የቆዳ ንክኪ የተገኘ ውጤት፣ ለምሳሌ በሳሙና ወይም በሎሽን ውስጥ ያሉ አንዳንድ ኬሚካሎች።\n\n"
+                                        
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "10dp", 0, "20dp", 0
+                                
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#መከላከያ መንገዶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ጥሩ ንጽህና:"\
+                                        "ቆዳን ንፁህ እና ደረቅ ያድርጉት በተለይም ለቁጣ በተጋለጡ አካባቢዎች።\n\n"\
+                                        "ከመጠን በላይ ማሞቅን ያስወግዱ:"\
+                                        "በሞቃታማ የአየር ጠባይ ወቅት ልጅዎን  ጨርቆችን ይልበሱ የሙቀት ሽፍታዎችን ለመከላከል።\n\n"\
+                                        "ቀሰቃሽ ነግሮችን መለየት እና ማስወገድ\n\n"\
+                                        "ሽፍታው በአለርጂ ምላሹ የሚከሰት ከሆነ ተጨማሪ ወረርሽኞችን ለመከላከል አለርጂን (ምግቦችን፣ ሳሙናዎችን፣ ጨርቆችን) ማስወገድ አስፈላጊ ነው።\n\n"    
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#መድሃኒት ማክበር"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ሽፍታው በጥቂት ቀናት ውስጥ ካልተሻሻለ፣ ከተባባሰ ወይም እንደ ትኩሳት ካሉ ሌሎች ምልክቶች ጋር አብሮ የሚሄድ ከሆነ ለበለጠ ግምገማ እና ህክምና የሕፃናት ሐኪም ማማከር አስፈላጊ ነው።"\
+                                        "አንዳንድ ሽፍቶች የሕክምና ጣልቃገብነት የሚያስፈልጋቸው በጣም አሳሳቢ ሁኔታዎች ምልክት ሊሆኑ ይችላሉ።\n\n"\
+                                        "ለበለጠ ሕክምና ወደ ሆስፒታል ያምሩ!!\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+                            
+                        

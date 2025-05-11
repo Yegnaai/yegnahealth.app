@@ -1,0 +1,696 @@
+<FoodfScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+                    
+                    # Header Section
+                    MDBoxLayout:
+                        adaptive_height: True
+                        #padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDLabel:
+                            text: "ስፖርትና ምግቦች"
+                            font_name: "assets/fonts/Yeshuah.ttf"
+                            theme_text_color: "Secondary"
+                            font_size: "19sp"
+                            halign: 'center'
+                            pos_hint: {"center_x": .5}
+                            bold: True
+                            adaptive_height: True
+                        
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('food')
+
+                    # Scrollable Content Section
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+                            
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.5  # Use size_hint for better responsiveness
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+                                
+                                Image:
+                                    source: "assets/food/swimmer.jpg"
+                                    size_hint: None, None
+                                    size: "150dp", "150dp"
+                                    fit_mode: "contain"  # Replaces allow_stretch/keep_ratio
+                                    pos_hint: {"center_x": 0.5}
+
+                                
+                                MDLabel:
+                                    text: "መዋኘት"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "20sp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+                                
+                                MDLabel:
+                                    text:
+                                        ""\
+                                        "ዋና ለምን?:-"\
+                                        "መዋኘት ሁሉን አቀፍ ስፖርታዊ ከሆኑ እንቅስቃሴዎች ውስጥ አንዱ ነው።በሰውነትዎ ውስጥ ያሉ ሁሉንም ጡንቻዎች እንደሰሩ ያደረጋል። የልብና የደም ሥር (ቻርዲኦቫስቹላር) ስርዓትን ያጠናክራል፣ የሳንባዎችን አቅም ያሻሽላል፣ የጡንቻን ጽናት ያዳብራል እና ተለዋዋጭነትን ይጨምራል።\n"
+                                    font_size: "16sp"
+                                    halign: 'center'
+                                    theme_text_color: "Hint"
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text:
+                                            "የመዋኛ ደንብ፦"\
+                                            ""
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "20sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+
+                                    
+                                MDLabel:
+                                    text:
+                                        ""\
+                                        "Freestyle(የፊት ክራውል)"\
+                                        ""
+                                    bold: True
+                                    adaptive_height: True
+                                    font_size: "20sp"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ለፍጥነት እና ለጽናት በጣም ውጤታማው ምት ነው።"\
+                                        "በዚህ ዋና ግዜ በይበልጥ የምሰሩ የሰውነት ክፍሎች ትከሻዎች ፣ ክንዶች ፣ ደረት ፣ እና እግሮች።"\
+                                        "የምሰጠው ጥቅም ፡ የተስተካከለ አካል፣ እና ጥሩ የአተነፋፈሰ ሰራት እንደኖረን ያደርጋል።:"\
+                                        "\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDLabel:
+                                    text:
+                                        ""\
+                                        "የኋላ ምት"\
+                                        ""
+                                    bold: True
+                                    adaptive_height: True
+                                    font_size: "20sp"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ለጀርባዎ እና ለትከሻዎ ጡንቻዎች በጣም ጥሩ ነው፣ ለደረትዎ አረፍ ቅርጽ ይሰጧታል።"\
+                                        "በዚህ ዋና ግዜ የምሰሩ የሰውነት ክፍሎች፥ የላይኛው ጀርባ፣ ትከሻዎች እና ደረት።"\
+                                        "\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDLabel:
+                                    text:
+                                        ""\
+                                        "የደረት ምት(Breaststroke)"\
+                                        ""
+                                    bold: True
+                                    adaptive_height: True
+                                    font_size: "20sp"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ቀርፋፋ ግን ፍጣን ለወጥ ያሰገኛል ፣ ደረትን፣ ትከሻዎን እና የእገር ታፋን ለማሰራት በጣም ጥሩ ነው።"\
+                                        "በዚህ ዋና ግዜ የምሰሩ የሰውነት ክፍሎች፥ ፥ ደረት፣ ትከሻዎች፣ እና የእገር ታፋ።"\
+                                        "ትኩረት ይስጡ፥  አይቸኩሉ ፡ ውጤታማነት ቁልፍ ነው።"\
+                                        "\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDLabel:
+                                    text:
+                                        ""\
+                                        "የቢራቢሮ ምት"\
+                                        ""
+                                    bold: True
+                                    adaptive_height: True
+                                    font_size: "20sp"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "በጣም ፈታኝ ነገር ግን በሚያስደንቅ ሁኔታ የሚክስ አጠቃላይ የሰውነት እንቅስቃሴ ነው።"\
+                                        "በዚህ ዋና ግዜ የምሰሩ የሰውነት ክፍሎች፥ ፥ ይሳተፋል፡ ኮር፣ ትከሻዎች፣ ደረት፣ ክንዶች እና እግሮች።"\
+                                        "\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+                                    
+                                    MDLabel:
+                                        text:"ለዋና ጉልበት የምሆኑ ምግቦች፦"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "20sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+
+
+                                
+                                MDLabel:
+                                    text:
+                                        ""\
+                                        "ቅድመ-ዋና(ኃይል መጨመር)"
+
+                                    bold: True
+                                    adaptive_height: True
+                                    font_size: "20sp"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ሙዝ - በፖታስየም እና በካርቦሃይድሬት የተሞላ።\n\n"\
+                                        "Greek Yogurt ከቤሪስ ጋር - ፕሮቲን + አንቲኦክሲደንጽ የመዋኘትን አቅም ለመጨመረ።\n\n"\
+                                        "Smoothie  ሙዝ, የአልሞንድ ወተት, የፕሮቲን ዱቄት"\
+                                        "\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                
+                                MDLabel:
+                                    text:
+                                        ""\
+                                        "ከድህረ፡ዋና (የጡንቻ የማገገሚያ)"\
+                                        ""
+                                    bold: True
+                                    adaptive_height: True
+                                    font_size: "20sp"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "የተጠበሰ ዶሮ - ጡንቻን ለመጠገን\n\n"\
+                                        "ጣፋጭ ድንች  - (glycogen stores) ይሞላል።\n\n"\
+                                        "Salmon  - በኦሜጋ -3 የበለፀገ\n\n"\
+                                        "አቮካዶ  - ጤናማ ስብ ለመገጣጠሚያ እና ለጡንቻ ጤና።"\
+                                        "\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                            
+ 
+                            # Second section
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.5
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+                                
+                                Image:
+                                    source: "assets/food/box.jpg"
+                                    size_hint: None, None
+                                    size: "150dp", "150dp"
+                                    fit_mode: "contain"  # Replaces allow_stretch/keep_ratio
+                                    pos_hint: {"center_x": 0.5}
+
+                                
+                                MDLabel:
+                                    text: "የቦክስ ትግል"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "20sp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+                                
+                                MDLabel:
+                                    text: 
+                                        "ቦክስ  ኃይልን የምፋልግ፣ ጽናትን እና ፈጣን ማገገምን የሚጠይቅ ከፍተኛና ኃይለኛ ስፖርት ነው።"\
+                                        "ጉልበትን ለመቆጠብ፣ ጥንካሬን ለማዳበር እና ከእነዚያ ከባድ የአካል ብቃት እንቅስቃሴዎች በኋላ በፍጥነት ለማገገም ሰውነትዎን በትክክለኛ ንጥረ ነገሮች ማግዜ አስፈላጊል ነው።\n"
+                                    font_size: "16sp"
+                                    halign: 'center'
+                                    theme_text_color: "Hint"
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        ""\
+                                        "ቅድመ፡ቦክስ(የኃይል እና የብርታት ምግብ)"\
+                                        ""
+                                    bold: True
+                                    adaptive_height: True
+                                    font_size: "20sp"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ሩዝ እና ዶሮ  - ውስብስብ ካርቦሃይድሬት + ፕሮቲን ለኃይል።\n\n"\
+                                        "ጣፋጭ ድንች  ፡ ከፍተኛ የካርቦሃይድሬት እና የቫይታሚን ኤ ለሃይል እና ለጡንቻ ተግባር።\n\n"\
+                                        "ሙዝ ከኦቾሎኒ ቅቤ ጋር - ፈጣን ካርቦሃይድሬትስ እና ጤናማ ስብ ለሃይል መጨመር።\n\n"\
+                                        "የግሪክ እርጎ እና ማር  - ፕሮቲን ለጡንቻ ማገዶ + ማር ለፈጣን ጉልበት።"\
+                                        "\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                
+                                MDLabel:
+                                    text:
+                                        ""\
+                                        "ድህረ ቦክስ (ማገገሚያ እና የጡንቻ ጥገና)"\
+                                        ""
+                                    bold: True
+                                    adaptive_height: True
+                                    font_size: "20sp"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "እንቁላል እና አቮካዶ  - ከፍተኛ ጥራት ያለው ፕሮቲን + ጤናማ ቅባቶች ለጡንቻ ማገገሚያ።\n\n"\
+                                        "ሳልሞን - እብጠትን ለመቀነስ እና ጡንቻን መልሶ ለመገንባት በኦሜጋ -3 እና በፕሮቲን የታሸገ።\n\n"\
+                                        "Protein Smoothie (ሙዝ, ስፒናች, ፕሮቲን ዱቄት) - ፈጣን የማገገም መጠጥ ከፕሮቲን, ካርቦሃይድሬት እና ማይክሮ ኤለመንቶች ጋር።\n\n"\
+                                        "Tuna Salad with Whole Grain Crackers - ለጥ ያለ ፕሮቲን + ጤናማ ካርቦሃይድሬትስ በፍጥነት ለማገገም።"\
+                                        "\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.5
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+                                
+                                Image:
+                                    source: "assets/food/cycli.jpg"
+                                    size_hint: None, None
+                                    size: "150dp", "150dp"
+                                    fit_mode: "contain"  # Replaces allow_stretch/keep_ratio
+                                    pos_hint: {"center_x": 0.5}
+
+                                
+                                MDLabel:
+                                    text: "ብስክሌት መንዳት"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "20sp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+                                
+                                MDLabel:
+                                    text: "ለብስክሌት ጉዞ ቀጣይነት ያለው የሃይል ድጋፍ የእግር ጡንቻ ጽናትን እና ለማገገም የሚረዱ ምግቦች ያስፈልጉዎታል።\n"
+                                    font_size: "16sp"
+                                    halign: 'center'
+                                    theme_text_color: "Hint"
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text:"ቅድመ ብስክሌት (ኃይል ለጽናት)"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "20sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ፓስታ - ውስብስብ ካርቦሃይድሬት ለረጅም ጊዜ የሚቆይ ኃይል።\n\n"\
+                                        "አጃ ከአልሞንድ ቅቤ ጋር - ቀስ ብሎ የሚለቀቅ ካርቦሃይድሬትስ ለረጅም ጊዜ የሚቆይ ኃይል።\n\n"\
+                                        "ለጉልበት ሙዝ - ቁርጠትን ለመከላከል በፍጥነት በሚፈጩ ካርቦሃይድሬት እና ፖታስየም የበለፀገ ነው።\n\n"\
+                                        "ዶሮ ፡ በፕሮቲን እና በካርቦሃይድሬት የበለፀገ ምግብ ፣ ከመጠን በላይ ክብደት ሳይሰማቸው ጡንቻዎችን ያነቃቃል።\n\n"\
+                                        "ጁሶች (ስፒናች፣ ሙዝ፣ የፕሮቲን ዱቄት) ፡ ከጉዞው በፊት ለመነቃቃትና ፈጣን እና ቀላል ሀይል ለማገኘት።"\
+                                        "\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text:"ድህረ፡ሳይክል (የጡንቻ ማገገም)"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "20sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ሳልሞን እና ጣፋጭ ድንች - ኦሜጋ-3 ዎች ለ እብጠት እና ለጡንቻ ማገገሚያ + ካርቦሃይድሬትስ ለኃይል እድሳት።\n\n"\
+                                        "የግሪክ እርጎ ከማር  ጋር ፡ ፕሮቲን እና አንቲኦክሲደንጽ ለጡንቻ ጥገና እና ኦክሳይድ ውጥረትን ለመቀነስ።\n\n"\
+                                        "እንቁላል እና አቮካዶ  ፡ ከፍተኛ ጥራት ያለው ፕሮቲን እና ጤናማ ቅባቶች ከጉዞ በኋላ ጡንቻዎችን እንደገና ለመገንባት እና ለማሞቅ።\n\n"\
+                                        "ዶሮ ፡ በፕሮቲን እና በካርቦሃይድሬት የበለፀገ ምግብ ፣ ከመጠን በላይ ክብደት ሳይሰማቸው ጡንቻዎችን ያነቃቃል።\n\n"\
+                                        "ጁሶች (ስፒናች፣ ሙዝ፣ የፕሮቲን ዱቄት) ፡ ከጉዞው በፊት ለመነቃቃትና ፈጣን እና ቀላል ሀይል ለማገኘት።"\
+                                        "\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text:"ውሃ ማጠጣት ጠቃሚ ምክር"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "20sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ብስክሌት መንዳት በፍጥነት ከሰውነታችን ውሃ እንድጠፋ ያደረጋል ፣ስለዚህ የጠፉ ማዕድናትን ለመተካት እና በረጅም ጉዞ ጊዜ ጥንካሬን ለመጠበቅ ከኤሌክትሮላይቶች ጋር የተቀላቀለ ውሃ መጠጣትዎን ያረጋግጡ።"\
+                                        "\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+   
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.5
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+                                
+                                Image:
+                                    source: "assets/food/hiking.jpg"
+                                    size_hint: None, None
+                                    size: "150dp", "150dp"
+                                    fit_mode: "contain"  # Replaces allow_stretch/keep_ratio
+                                    pos_hint: {"center_x": 0.5}
+
+                                
+                                MDLabel:
+                                    text: "የእግር ጉዞ ማድረግ"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "20sp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+                                
+                                MDLabel:
+                                    text: "የእግር ጉዞ የእግር ጥንካሬን የሚገነባ፣ ጽናትን የሚያጎለብት እና አእምሮን የሚያድስ ገዳይ ስፖርታዊ እንቅስቃሴ ነው። ለዚህ እንቅስቃሴ፣ ጠንካራ የእግር ጉዞ ለማድረግ ዘላቂ ጉልበት እና ምግብ ያስፈልግዎታል።\n"
+                                    font_size: "16sp"
+                                    halign: 'center'
+                                    theme_text_color: "Hint"
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "የእግር ጉዞ (ኃይል ለጽናት)"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "20sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ሙዝ - ፈጣን ጉልበት ከካርቦሃይድሬት እና ፖታስየም የጡንቻ መኮማተርን ለመከላከል።\n\n"\
+                                        "ኦትሜል ከለውዝ ጋር - ውስብስብ ካርቦሃይድሬት ቀስ በቀስ ለሚለቀቅ ኃይል + አንቲኦክሲደንትስ እና ጤናማ ቅባቶች ለማገኘት።"\
+                                        "\n\n"
+
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "ከእግር ጉዞ በኋላ (የጡንቻ ጥገና)"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "20sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "የተጠበሰ ዶሮ - ጡንቻዎችን እና ግላይኮጅንን ለመሙላት።\n\n"\
+                                        "ሳልሞን ከድንች ድንች ጋር - ኦሜጋ -3 ለ እብጠት እና ካርቦሃይድሬትስ የኃይል መጠንን ለመመለስ።\n\n"\
+                                        "ቱና ሰላጣ ጥራጥረ እህል ጋር - ጡንቻን ለመጠገን ፕሮቲን እና ሀይል ለመሙላት ጤናማ ካርቦሃይድሬድ ይሰጠናል።\n\n"\
+                                        "እንቁላል እና አቮካዶ - ፕሮቲን እና ጤናማ ስብ ለጡንቻ ማገገሚያ።"\
+                                        "\n\n"
+
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+   
+
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.5
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+                                
+                                Image:
+                                    source: "assets/food/ru.jpg"
+                                    size_hint: None, None
+                                    size: "150dp", "150dp"
+                                    fit_mode: "contain"  # Replaces allow_stretch/keep_ratio
+                                    pos_hint: {"center_x": 0.5}
+
+                                
+                                MDLabel:
+                                    text: "መሮጥ"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "20sp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+                                
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "መሮጥ ከፍተኛ ተፅእኖ ያለውና ፅናት ላይ የተመሰረተ እንቅስቃሴ ሲሆን ይህም ዘላቂ ጉልበትና ጡንቻ ይጠይቃል። በሩጫዎ ወቅት ጠንካራ ሆነው እንዲቀጥሉ በተመጣጣኝ የካርቦሃይድሬትስ ፕሮቲኖች ጤናማ ስብላይ ማተኮር ያስፈልግዎታል\n\n"
+                                    font_size: "16sp"
+                                    halign: 'center'
+                                    theme_text_color: "Hint"
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "መሮጥና የተመጣጠነ ምግብ"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "20sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ሙዝ :-"\
+                                        "ለምን ፡ ሙዝ በፍጥነት በሚፈጩ ካርቦሃይድሬትና ፖታሲየም የበለፀገ ሲሆን ይህም መኮማተርን ይከላከላል።\n\n"\
+                                        "መቼ : ከመሮጥ 30 ደቂቃዎች በፊት ለቀላል መክሰስ ተስማሚ።\n\n"\
+                                        "ጣፋጭ ድንች:-"\
+                                        "ለምን : ውስብስብ ካርቦሃይድሬትስ እና ፖታስየም የተጫነ, ለረጅም ጊዜ የሚቆይ ኃይል ይሰጣሉ እና በጠንካራ ሩጫ ወቅት የጡንቻ መኮማተርን ይከላከላሉ።\n\n"\
+                                        "መቼ : ለከፍተኛ ውጤት ረዘም ላለ ጊዜ ከመሮጥ በፊት ከ1-2 ሰአታት በተሻለ ሁኔታ ጥቅም ላይ ይውላል።\n\n"\
+                                        ""                                   
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "ከሩጫዎ በኋላ"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "20sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ከሩጫዎ በኋላ ጡንቻዎችዎ  glycogen  (የሰውነትዎ የኃይል ማከማቻዎች) ተሟጠዋል እና የጡንቻን ጉዳት ለመጠገን  ፕሮቲን  ያስፈልግዎታል። ከሂደቱ በኋላ ያለው ምግብ glycogen በ ካርቦሃይድሬት በኩል ወደነበረበት መመለስ እና ጡንቻዎትን በ ፕሮቲን መፈወስ ላይ ማተኮር አለበት።\n\n"\
+                                        "የተጠበሰ ዶሮ :-"\
+                                        "ለምን ፡ ከዶሮ የሚገኘው ዘንበል ያለ ፕሮቲን የጡንቻን ፋይበር ለመጠገን ይረዳል።\n\n"\
+                                        "መቼ : ከተሮጡ በኋላ በ30-60 ደቂቃዎች ውስጥ ለተመቻቸ ማገገም።\n\n"\
+                                        "እንቁላል እና አቮካዶ:-"\
+                                        "ለምን :እንቁላል ከፍተኛ ጥራት ያለው ፕሮቲን ነው፣ ለጡንቻ ማገገሚያ ወሳኝ ነው፣ እና አቮካዶ ከስፖርታዊ እንቅስቃሴ በኋላ እብጠትን ለመዋጋት እና ኃይልን ለመጠበቅ የሚረዱ ጤናማ ቅባቶችን ይሰጣል።\n\n"\
+                                        "መቼ : ከሩጫ በኋላ ለቁርስ ወይም ለቀላል ምግቦች፣ በተለይም ከጠዋት ሩጫ በኋላ።\n\n"\
+                                        ""                                   
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                            
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.5
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+                                
+                                Image:
+                                    source: "assets/food/zoe.png"
+                                    size_hint: None, None
+                                    size: "150dp", "150dp"
+                                    fit_mode: "contain"  # Replaces allow_stretch/keep_ratio
+                                    pos_hint: {"center_x": 0.5}
+
+                                
+                                MDLabel:
+                                    text: "ክብደት ማንሳት"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "20sp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+                                
+                                MDLabel:
+                                    text: "################################\n"
+                                    font_size: "16sp"
+                                    halign: 'center'
+                                    theme_text_color: "Hint"
+                                    adaptive_height: True
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "8dp"
+                                    
+                                    MDLabel:
+                                        text: "########"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_size: "20sp"
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "#####################:"\
+                                        "#######################"\
+                                        "########################"\
+                                        "##########################"\
+                                        "##########################"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                            
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.5
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+                                
+                                Image:
+                                    source: "assets/food/tennis.jpg"
+                                    size_hint: None, None
+                                    size: "150dp", "150dp"
+                                    fit_mode: "contain"  # Replaces allow_stretch/keep_ratio
+                                    pos_hint: {"center_x": 0.5}
+
+                                
+                                MDLabel:
+                                    text: "ቴኒስ"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    bold: True
+                                    font_size: "20sp"
+                                    theme_text_color: "Secondary"
+                                    halign: 'center'
+                                    adaptive_height: True
+                                

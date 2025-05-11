@@ -1,0 +1,194 @@
+<SkincScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    # Header Section
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('skin')
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    # Scrollable Content Section
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/warts.jpg"
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "#ኪንታሮት"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"
+
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ኪንታሮት በሂውማን ፓፒሎማ ቫይረስ (HPV) ምክንያት የሚመጡ ትንንሽ እና ካንሰር ያልሆኑ በቆዳ ላይ ያሉ እድገቶች ናቸው። ኪንታሮት በተለምዶ በእጆች፣ በእግሮች እና በሌሎች የሰውነት ክፍሎች ላይ የሚገኝ ሲሆን በአጠቃላይ ምንም ጉዳት የለውም ነገር ግን የምያናድ ወይም የሚያሰቃይ ሰሜት አለው። ብዙውን ጊዜ ህጻናት በተደጋጋሚ በቆዳ ንክኪ እና አንዳንዴም ደካማ የመከላከያ ምላሾች ስላላችው በኪንታሮት ይይዛሉ።\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#ምልክቶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                    
+                                        
+
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "ማሳከክ፥"\
+                                        "ትንንሽ፣ እብጠቶች ፡ ኪንታሮት በተለምዶ ክብ፣ ሸካራና ነው፣ እና ወይ የሥጋ፡ቀለም፣ ነጭ፣ ሮዝ ወይም ቡናማ ሊሆን ይችላል።\n\n"\
+                                        "ጥቁር ነጠብጣቦች:"\
+                                        "ብዙ ጊዜ “የዘር ኪንታሮት” ተብለው የሚገለጹት እነዚህ በኪንታሮቱ ውስጥ ያሉ ጥቃቅን ጥቁር ነጠብጣቦች የረጉ ደም ስሮች ናቸው።\n\n"\
+                                        "በቦታ ላይ የተመሰረተ አለመመቸት፥"\
+                                        "በእግር ጫማ ላይ የሚፈጠር ኪንታሮት (የእፅዋት ኪንታሮት) በእግር ሲራመዱ ምቾት ማጣት ወይም ህመም ሊያስከትል ይችላል።\n\n"\
+                                        "Cluster Formation"\
+                                        "ኪንታሮት በአንድም ሆነ በክላስተሮች በተለይም በእጆች እና በእግሮች ላይ ሊታይ ይችላል።\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#አጋላጭ ምክንያቶች፥"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                    
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ኪንታሮት የሚከሰተው በተለያዩ የ (HPV) አይነት ሲሆን ይህም በቁርጭምጭሚት፣ በመቧጨር ወይም በመሰባበር ወደ ቆዳ ይገባል።\n\n"\
+                                        "ከቆዳ-ለቆዳ ግንኙነት**፡ ኪንታሮት የሚተላለፈው ኪንታሮት ካለበት ሰው ጋር በቀጥታ በመገናኘት ወይም እንደ ፎጣ፣ ወለል ወይም በቫይረሱ ​​የተያዙ ጫማዎችን በመንካት ነው።\n\n"\
+                                        "የተዳከመ የበሽታ መከላከል ስርዓት**፡ ደካማ የመከላከል አቅማቸው የተዳከመ ህጻናት ለኪንታሮት በሽታ የተጋለጡ ናቸው።\n\n"\
+                                        "ሞቃታማ እና እርጥበታማ አካባቢዎች**፡ ኪንታሮት የሚበቅለው እርጥብ በሆኑ አካባቢዎች እንደ የህዝብ ገንዳዎች፣ ሻወር እና መቆለፊያ ክፍሎች ውስጥ ሲሆን ቫይረሱ በቀላሉ ሊጠቃ ይችላል።\n\n"\
+                                        "ሚስማርን መንከስ ወይም በሚስማር መውጋት፡፡ ይህ ልማድ የቆዳ መቆራረጥን ሊያስከትል ስለሚችል (HPV) እንዲገባ ያስችለዋል።።\n\n"
+                                        
+                                        
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "10dp", 0, "20dp", 0
+                                    
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#መከላከያ መንገዶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ጥሩ ንጽህና፡- እጅን አዘውትሮ መታጠብ እና እግርን ንፁህ እና ደረቅ እንዲሆን ማበረታታት፣በተለይም እንደ ገንዳዎች ሽንትቤት ባሉ የህዝብ ቦታዎች ከቆዩ በኋላ።\n\n"\
+                                        "ኪንታሮት ከመቁርጥ ወይም ከመቧጨር ይቆጠቡ፥  ቫይረሱን ወደ ሌሎች የሰውነት ክፍሎች ወይም ወደ ሌሎች ሰዎች ሊተላለፍ ይችላል።\n\n"\
+                                        "በሽታን የመከላከልን ስራትን ያሳደጉ፡ ጤናማ አመጋገብ እና ትክክለኛ እረፍት ማድረግ የሰውነትን በሽታ የመከላከል ስርዓት እንደ (HPV) ያሉ ቫይረሶችን ለመከላከል ይረዳል።\n\n"\
+                                        "የተለያዩ የግል እቃዎች ፡ ፎጣዎችን፣ ጫማዎችን ወይም ካልሲዎችን ከሌሎች ጋር ከመጋራት ይቆጠቡ በተለይም አንድ ሰው ኪንታሮት ካለው።\n\n"
+
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#መድሃኒት ማክበር"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ኪንታሮት ብዙውን ጊዜ በጊዜ ሂደት በራሱ ይጠፋል፣ ነገር ግን ህክምና የምደረገው ሂደቱን ለማፋጠን እና ምቾትን ከምነሳን ነገር ለመቀነስ ይረዳል። ኪንታሮቱ  የሚያድግ ወይም የሚያም ከሆነ ለተገቢው ጣልቃገብነት የጤና ባለሙያ ማማከር አስፈላጊ ነው።\n\n"\
+                                        "ለበለጠ ሕክምና ወደ ሆስፒታል ያምሩ\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+                            
+                        

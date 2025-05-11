@@ -1,0 +1,192 @@
+<SkinaScreen>
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    # Header Section
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('skin')
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    # Scrollable Content Section
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/magel.jpg"
+
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "#በስውነት ላይ መግል የቋጤር እብጥት"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "15dp"
+
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "መግል የቋጤር እብጥት፣በተለምዶ የሚያመለክተው ከቆዳው ስር ያለ ብጉር እንዲሰበሰብ የሚያደርገውን ኢንፌክሽን ነው። እብጠቶች በሰውነት ላይ በማንኛውም ቦታ ሊፈጠሩ ይችላሉ፣ ነገር ግን በባክቴሪያ በሽታ ምክንያት በቆዳ ላይ በጣም የተለመዱ ናቸው።\n"
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#ምልክቶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                    
+                                        
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "#እብጠት፥-"\
+                                        "አካባቢው እየሰፋ የምህድ።\n\n"\
+                                        "#መቅላት፥-"\
+                                        "እብጠቱ ዙሪያ ያለው ቆዳ ቀይ እና ያበጠ ይመስላል።\n\n"\
+                                        "#ህመም፡-"\
+                                        "የተጎዳው አካባቢ ብዙ ጊዜ ለስላሳ እና ስነካ ያማል።\n\n"\
+                                        "#መግል፥-"\
+                                        "ወፍራም፣ ነጭ ወይም ቢጫ ፈሳሽ (መግል) መኖር፣ ከቆዳ ስረ ልውጣ ይችላል።\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#አጋላጭ ምክንያቶች፥"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                    
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "የባክቴሪያ ኢንፌክሽን፥ መገል የቋጤረ እብጠት በአብዛኛው የሚከሰተው በባክቴሪያ ነው።\n\n"\
+                                        "ያደገ ፀጉር፥ወደ ቆዳ ተመልሶ የሚያድግ ፀጉር ብስጭት እና ኢንፌክሽን ሊፈጥር ይችላል፣ ይህም ወደ እብጠትና መገል የቋጠረ እብጠት እንዲፈጠር ያደርጋል።\n\n"\
+                                        "የታገደ Sebaceous Gland ወይም የላብ እጢ:፡ መዘጋት ዘይት፣ የሞቱ የቆዳ ሴሎች እና ባክቴሪያዎች እንዲከማች ያደርጋል።\n\n"\
+                                        "የበሽታ መከላከያ፡ የሰውነት በሽታ የመከላከል ስርዓታቸው የተዳከመ ሰዎች፣ እንደ የስኳር በሽታ ያለባቸው ወይም የበሽታ መከላከያ መድሃኒቶችን የሚወስዱ ሰዎች፣ የተጋለጡ ናቸው።\n\n"\
+                                        "ደካማ ንጽህና፥የንጽህና እጦት ለኢንፌክሽን እና ለተለያዩ በሸታ መጋለጥን ይጨምራል።\n\n"
+                                        
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "10dp", 0, "20dp", 0
+                                                                
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#መከላከያ መንገዶች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ትክክለኛውን ንጽህና መጠበቅ፥ ቆዳን አዘውትሮ ማፅዳት፣በተለይ ለላብ ተጋለጡ ቦታዎች።\n\n"\
+                                        "የቆዳ ጉዳቶችን በአፋጣኝ ያክሙ፥ ቁስሎችን፣ ወዲያውኑ ያፅዱ እና ባክቴሪያ እንዳይገባ ይሸፍኑ።\n\n"\
+                                        "ብጉር ወይም እብጠትን ያስወግዱ፥ ይህ ባክቴሪያዎችን ወደ ቆዳ ውስጥ ዘልቆ እንዲገባ ስለሚያደርግ በበሽታው የመያዝ እድልን ይጨምራል።\n\n"\
+                                        "ሥር የሰደዱ ሁኔታዎችን ይቆጣጠሩ፥ እንደ የስኳር በሽታ ያሉ ሁኔታዎች ለቆዳ ኢንፌክሽንና ለቁርጥማት ተጋላጭነትን ስለሚጨምሩ በጥንቃቄ ሊታከሙ ይገባል።\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "#መድሃኒት ማክበር"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "15dp"
+                                        halign: "center"
+                                        halign: "justify"
+                                
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "እብጠት ከቀጠለ ወይም እየተባባሰ ከሄደ፣ ካልታከሙ የሆድ እጢዎች **ሴሉላይትስ** ወይም ሴፕሲስን ጨምሮ ወደ ከባድ ኢንፌክሽኖች ስለሚመሩ የጤና ባለሙያ ማማከር አስፈላጊ ነው።\n\n"\
+                                        "ለበለጠ ሕክምና ወደ ሆስፒታል ያምሩ\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+                        
+                    

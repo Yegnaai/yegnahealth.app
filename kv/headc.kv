@@ -1,0 +1,231 @@
+<HeadcScreen>:
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: '10dp'
+
+                    # Header Section
+                    MDBoxLayout:
+                        adaptive_height: True
+                        padding: '5dp'
+                        pos_hint: {"center_y": .99}
+
+                        MDIconButton:
+                            icon: "close"
+                            md_bg_color: 1, 1, 1, .6
+                            x: 12
+                            pos_hint: {"top": .99}
+                            on_release: app.switch_to_screen('head')
+                        
+                        MDIconButton:
+                            icon: "theme-light-dark"
+                            theme_text_color: "Secondary"
+                            on_release: app.toggle_theme()
+
+                    # Scrollable Content Section
+                    ScrollView:
+                        MDGridLayout:
+                            cols: 1
+                            padding: dp(2)
+                            spacing: dp(2)
+                            adaptive_height: True
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                size_hint: None, None
+                                size_hint_x: 0.6
+                                adaptive_height: True
+                                pos_hint: {"center_x": 0.5}
+                                padding: dp(10)
+
+                                FloatLayout:
+                                    size_hint: None, None
+                                    size: "280dp", "280dp"
+                                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+                                    canvas.before:
+                                        Color:
+                                            rgba: 1, 1, 1, 1
+                                        RoundedRectangle:
+                                            pos: self.pos
+                                            size: self.size
+                                            radius: [25, ]
+                                            source: "assets/images/nake.jpg"
+
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "የጉሮሮ ቁስለት"
+                                    bold: True
+                                    adaptive_height: True
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13dp" 
+                                    halign: "center" 
+
+
+                                MDLabel:
+                                    text: 
+                                        "\n"\
+                                        "በጣም የተለመዱ እና አብዛኛውን ጊዜ በመደበኛነት በሳምንት ውስጥ ይሻለናል።\n\n" 
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "የጉሮሮ ቁስለት ሕክምናዎች!"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "13dp"  
+    
+
+                                MDLabel:
+                                    text:
+                                        "\n"\ 
+                                        "(ibuprofen) ኢቡፕሮፌን ወይም ፓራሲታሞል ይውሰዱ።\n\n"\
+                                        "ፓራሲታሞል ለልጆች እና ibuprofen መውሰድ ለማይችሉ ሰዎች የተሻለ ነው፡፡\n\n"\
+                                        "ብዙ ቀዝቃዛ ወይም ሞቅ ያለ ፈሳሽ ይጠጡ, እና በጣም ትኩስ መጠጦችን ያስወግዱ ቀዝቃዛና ለስላሳ ምግቦችን ይመገቡ።\n\n"\
+                                        "ሲጋራ ማጨስን እና ከሲጋራ ጭስ ቦታዎች ይራቁ።\n\n"\
+                                        "በሞቀ እና በጨዋማ ውሃ አፍህን ማጠብ።\n\n"
+                                    
+                                    font_name: "assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "የተለመዱ የጉሮሮ ቁሰል መንስኤዎች"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "13dp"  
+                                
+                                    
+
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ጉንፋን የአፍንጫ ፍሳሽ, ሳል, ከፍተኛ ትኩሳት, ራስ ምታት እና አጠቃላይ ህመም ሊኖርብዎት ይችላል።\n\n"\
+                                        "የድምፅ ሳጥን እብጠት (laryngitis) እንዲሁም የተዳከመ ድምጽ ሊኖርዎት ይችላል። ደረቅ ሳል እና ጉሮሮዎን ለማጽዳት የማያቋርጥ ፍላጎት ሊኖርዎት ይችላል።\n\n"\
+                                        "የቶንሲል በሽታ (inflammation of the tonsils) - ቀይ ወይም ነጠብጣብ ቶንሲል።\n\n"\
+                                        "የጉሮሮ ቁሰል(bacterial throat infection) - በአንገትዎ ላይ እጢዎች በሚውጡበት ጊዜ።\n\n"\
+                                        "የ(glandular fever) -  በጣም የድካም ስሜት ሊሰማዎት ይችላል እና በአንገትዎ ላይ ትኩሳት እና እብጠት ሊኖርብዎት ይችላል።\n\n"
+
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+                                    
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "የጤና ባለሞያ መች ላማክር?"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "13dp"  
+
+                                                           
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ከሳምንት በኋላ መሻሻል ያልጀመሩ የማያቋርጥ ምልክቶች አሉዎት?\n\n" \
+                                        "ብዙ ጊዜ ከባድ የጉሮሮ መቁሰል ያጋጥምዎታል?\n\n"\
+                                        "ደካማ የቤሽታ የመከላከል አቅም ካሎት ለምሳሌ:-\n\n"\
+                                        "ኤች አይ ቪ አለብህ\ሽ ፣ ኬሞቴራፒ እየተከታተልክ\ሽ ነው ፣ ወይም በሽታ የመከላከል ስርዓትህን የሚቀንስ መድሃኒት እየወሰድክ\ሽ ከሆነ።\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "የጉሮሮ ቁሰል ከባድ ችግር ምልክት ሊሆን ይችላል?"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "13dp"  
+                                
+
+                                
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "ምልክቶችዎ በጣም በፍጥነት እየባሱ ከህዱ\n\n"\
+                                        "የመተንፈስ ችግር ካለብ\ሽ በሚተነፍሱበት ጊዜ ከፍተኛ ድምጽ እያሰሙ ከሆን።\n\n"\
+                                        "የመዋጥ ችግር አለብህ\ሽ።\n\n"\
+                                        "ለበለጠ ሕክምና ወደ ሆስፒታል ያምሩ።\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "የጉሮሮ ቁሰልን ማከም"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "13dp"  
+                                
+                                   
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "የጉሮሮ ቁሰል ብዙውን ጊዜ ከባድ አይደለም እና ብዙውን ጊዜ ከሶስት እስከ ሰባት ቀናት ውስጥ ልሻለን ይችላል።\n\n" \
+                                        "ምልክቶችዎን ለማስታገስ በቤት ውስጥ ሊጠቀሙባቸው የሚችሏቸው አንዳንድ ሕክምናዎች አሉ።\n\n"\
+                                        "የጉሮሮ ቁሰል ለማከም፣ ያለሐኪም የሚገዙ የህመም ማስታገሻዎች ፣ ለምሳሌ ፓራሲታሞል ፣ ብዙ ጊዜ ይመከራሉ። እነዚህም ከፍተኛ ሙቀትን (ትኩሳትን) ለመቀነስ ይረዳሉ።\n\n"\
+                                        "ለበለጠ ሕክምና ወደ ሆስፒታል ያምሩ።\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
+
+                                MDCard:
+                                    adaptive_height: True
+                                    padding: "11dp"
+
+                                    MDLabel:
+                                        text: "ያለሐኪም የሚገዙ ማስታገሻዎች መውሰድ የሌለባቸው ሰዎች:-"
+                                        bold: True
+                                        adaptive_height: True
+                                        font_name: "assets/fonts/Abyssinica.ttf"
+                                        font_size: "13dp"  
+
+                                   
+                                MDLabel:
+                                    text:
+                                        "\n"\
+                                        "አስም ያለባቸው።\n\n" \
+                                        "ያለፈ የሆድ ችግሮች ወይም ወቅታዊ የጨጓራ ​​ቁስለት ያለባቸው።\n\n"\
+                                        "የአሁኑ ወይም ያለፈ የጉበት ወይም የኩላሊት ችግሮች ያለባቸው።\n\n"\
+                                        "ለበለጠ ሕክምና ወደ ሆስፒታል ያምሩ።\n\n"
+                                    font_name:"assets/fonts/Abyssinica.ttf"
+                                    font_size: "13sp"
+                                    adaptive_height: True
+                                    theme_text_color: "Secondary"
+                                    adding: "20dp", 0, "20dp", 0
