@@ -1,3 +1,9 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/Yegnaai/yegnahealth.app)
+![GitHub repo size](https://img.shields.io/github/repo-size/Yegnaai/yegnahealth.app)
+![GitHub issues](https://img.shields.io/github/issues/Yegnaai/yegnahealth.app)
+![GitHub license](https://img.shields.io/github/license/Yegnaai/yegnahealth.app)
+![Made With Python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)
+
 # 🩺 yegnahealth.app
 
 **Yegna Health** is your intelligent companion for better health awareness in Ethiopia and beyond. Built with ❤️ using **Python + KivyMD**, it brings local, smart, and accessible health info directly into your hands — no internet required.
